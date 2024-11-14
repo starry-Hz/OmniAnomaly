@@ -7,7 +7,10 @@ __pycache__/
 
 # C extensions
 *.so
-
+# data/
+# 或者只忽略 .npy 文件
+*.npy
+*.h5
 # Distribution / packaging
 .Python
 build/
