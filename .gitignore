@@ -7,11 +7,15 @@ __pycache__/
 
 # C extensions
 *.so
+<<<<<<< Updated upstream
 # data/
 # 或者只忽略 .npy 文件
 *.npy
 *.h5
 data/labeled_anomalies.csv
+=======
+data/
+>>>>>>> Stashed changes
 # Distribution / packaging
 .Python
 build/
