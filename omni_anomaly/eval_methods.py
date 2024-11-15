@@ -2,7 +2,8 @@
 import numpy as np
 
 from omni_anomaly.spot import SPOT
-
+import logging
+logger = logging.getLogger(__name__)
 
 def calc_point2point(predict, actual):
     """
@@ -102,6 +103,7 @@ def bf_search(score, label, start, end=None, step_num=1, display_freq=1, verbose
     search_step, search_range, search_lower_bound = step_num, end - start, start
     if verbose:
         print("search range: ", search_lower_bound, search_lower_bound + search_range)
+        logging.info("search range: ", search_lower_bound, search_lower_bound + search_range)
     threshold = search_lower_bound
     m = (-1., -1., -1.)
     m_t = 0.0
@@ -113,7 +115,9 @@ def bf_search(score, label, start, end=None, step_num=1, display_freq=1, verbose
             m = target
         if verbose and i % display_freq == 0:
             print("cur thr: ", threshold, target, m, m_t)
+            logging.info("cur thr: ", threshold, target, m, m_t)
     print(m, m_t)
+    logging.info(m, m_t)
     return m, m_t
 
 
@@ -137,11 +141,14 @@ def pot_eval(init_score, score, label, q=1e-3, level=0.02):
     s.initialize(level=level, min_extrema=True)  # initialization step
     ret = s.run(dynamic=False)  # run
     print(len(ret['alarms']))
+    logging.info(len(ret['alarms']))
     print(len(ret['thresholds']))
+    logging.info(len(ret['thresholds']))
     pot_th = -np.mean(ret['thresholds'])
     pred, p_latency = adjust_predicts(score, label, pot_th, calc_latency=True)
     p_t = calc_point2point(pred, label)
     print('POT result: ', p_t, pot_th, p_latency)
+    logging.info('POT result: ', p_t, pot_th, p_latency)
     return {
         'pot-f1': p_t[0],
         'pot-precision': p_t[1],

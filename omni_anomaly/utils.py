@@ -7,6 +7,8 @@ from sklearn.preprocessing import MinMaxScaler
 
 prefix = "processed"
 
+import logging
+logger = logging.getLogger(__name__)
 
 def save_z(z, filename='z'):
     """
@@ -55,9 +57,17 @@ def get_data(dataset, max_train_size=None, max_test_size=None, print_log=True, d
     print('load data of:', dataset)
     print("train: ", train_start, train_end)
     print("test: ", test_start, test_end)
+    logging.info('load data of:', dataset)
+    logging.info("train: ", train_start, train_end)
+    logging.info("test: ", test_start, test_end)
     x_dim = get_data_dim(dataset)
     f = open(os.path.join(prefix, dataset + '_train.pkl'), "rb")
-    train_data = pickle.load(f).reshape((-1, x_dim))[train_start:train_end, :]
+    # train_data = pickle.load(f).reshape((-1, x_dim))[train_start:train_end, :]
+    ###################################################################################################
+    # 使用 numpy 加载 .pkl 文件
+    with open(os.path.join(prefix, dataset + '_train.pkl'), 'rb') as f:
+        train_data = np.load(f, allow_pickle=True).reshape((-1, x_dim))[train_start:train_end, :]
+    #####################################################################################################解决之前无法使用 pickle.load() 的问题
     f.close()
     try:
         f = open(os.path.join(prefix, dataset + '_test.pkl'), "rb")
@@ -77,6 +87,8 @@ def get_data(dataset, max_train_size=None, max_test_size=None, print_log=True, d
     print("train set shape: ", train_data.shape)
     print("test set shape: ", test_data.shape)
     print("test set label shape: ", test_label.shape)
+    logging.info("test set shape: ", test_data.shape)
+    logging.info("test set label shape: ", test_label.shape)
     return (train_data, None), (test_data, test_label)
 
 
@@ -91,11 +103,13 @@ def preprocess(df):
 
     if np.any(sum(np.isnan(df)) != 0):
         print('Data contains null values. Will be replaced with 0')
+        logging.info('Data contains null values. Will be replaced with 0')
         df = np.nan_to_num()
 
     # normalize data
     df = MinMaxScaler().fit_transform(df)
     print('Data normalized')
+    logging.info('Data normalized')
 
     return df
 

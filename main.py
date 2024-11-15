@@ -19,8 +19,16 @@ from omni_anomaly.model import OmniAnomaly
 from omni_anomaly.prediction import Predictor
 from omni_anomaly.training import Trainer
 from omni_anomaly.utils import get_data_dim, get_data, save_z
-
-
+import os
+log_dir = "./log"
+os.makedirs(log_dir, exist_ok=True)
+import logging
+logger = logging.getLogger(__name__)
+log_filename = f'{log_dir}/train.log'
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    filename=log_filename,
+                    filemode='a')
 class ExpConfig(Config):
     # dataset configuration
     dataset = "machine-1-1"
@@ -194,6 +202,7 @@ def main():
                 saver = VariableSaver(var_dict, config.save_dir)
                 saver.save()
             print('=' * 30 + 'result' + '=' * 30)
+            logging.info('=' * 30 + 'result' + '=' * 30)
             pprint(best_valid_metrics)
 
 

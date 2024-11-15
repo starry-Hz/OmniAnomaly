@@ -67,15 +67,17 @@ def load_data(dataset):
 
 
 if __name__ == '__main__':
-    datasets = ['SMD', 'SMAP', 'MSL']
-    commands = sys.argv[1:]
-    load = []
-    if len(commands) > 0:
-        for d in commands:
-            if d in datasets:
-                load_data(d)
-    else:
-        print("""
-        Usage: python data_preprocess.py <datasets>
-        where <datasets> should be one of ['SMD', 'SMAP', 'MSL']
-        """)
+    # datasets = ['SMD', 'SMAP', 'MSL']
+    # commands = sys.argv[1:]
+    # load = []
+    # if len(commands) > 0:
+    #     for d in commands:
+    #         if d in datasets:
+    #             load_data(d)
+    # else:
+    #     print("""
+    #     Usage: python data_preprocess.py <datasets>
+    #     where <datasets> should be one of ['SMD', 'SMAP', 'MSL']
+    #     """)
+    datasets = 'MSL'
+    load_data(datasets)

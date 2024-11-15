@@ -12,7 +12,8 @@ from tfsnippet.variational import VariationalInference
 from omni_anomaly.recurrent_distribution import RecurrentDistribution
 from omni_anomaly.vae import Lambda, VAE
 from omni_anomaly.wrapper import TfpDistribution, softplus_std, rnn, wrap_params_net
-
+import logging
+logger = logging.getLogger(__name__)
 
 class OmniAnomaly(VarScopeObject):
     def __init__(self, config, name=None, scope=None):
@@ -179,6 +180,7 @@ class OmniAnomaly(VarScopeObject):
 
             # get the reconstruction probability
             print('-' * 30, 'testing', '-' * 30)
+            logging.info('-' * 30, 'testing', '-' * 30)
             q_net = self.vae.variational(x=x_r, n_z=n_z, posterior_flow=self._posterior_flow)  # notice: x=x_r
             p_net = self.vae.model(z=q_net['z'], x=x, n_z=n_z)  # notice: x=x
             z_samples = q_net['z'].tensor

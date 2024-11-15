@@ -15,7 +15,8 @@ import numpy as np
 import pandas as pd
 import tqdm
 from scipy.optimize import minimize
-
+import logging
+logger = logging.getLogger(__name__)
 # colors for plot
 deep_saffron = '#FF9933'
 air_force_blue = '#5D8AA8'
@@ -127,6 +128,7 @@ class SPOT:
             self.data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         if isinstance(init_data, list):
@@ -144,6 +146,7 @@ class SPOT:
             self.data = self.data[r:]
         else:
             print('The initial data cannot be set')
+            logging.info('The initial data cannot be set')
             return
 
     def add(self, data):
@@ -163,6 +166,7 @@ class SPOT:
             data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         self.data = np.append(self.data, data)
@@ -204,7 +208,9 @@ class SPOT:
             print('Initial threshold : %s' % self.init_threshold)
             print('Number of peaks : %s' % self.Nt)
             print('Grimshaw maximum log-likelihood estimation ... ', end='')
-
+            logging.info('Initial threshold : %s' % self.init_threshold)
+            logging.info('Number of peaks : %s' % self.Nt)
+            logging.info('Grimshaw maximum log-likelihood estimation ... ', end='')
         g, s, l = self._grimshaw()
         self.extreme_quantile = self._quantile(g, s)
 
@@ -214,6 +220,11 @@ class SPOT:
             print('\t' + chr(0x03C3) + ' = ' + str(s))
             print('\tL = ' + str(l))
             print('Extreme quantile (probability = %s): %s' % (self.proba, self.extreme_quantile))
+            logging.info('[done]')
+            logging.info(f'\t{chr(0x03B3)} = {g}')
+            logging.info(f'\t{chr(0x03C3)} = {s}')
+            logging.info(f'\tL = {l}')
+            logging.info(f'Extreme quantile (probability = {self.proba}): {self.extreme_quantile}')
 
         return
 
@@ -415,6 +426,8 @@ class SPOT:
         if self.n > self.init_data.size:
             print('Warning : the algorithm seems to have already been run, you \
             should initialize before running again')
+            logging.info('Warning : the algorithm seems to have already been run, you \
+            should initialize before running again')
             return {}
 
         # list of the thresholds
@@ -612,6 +625,7 @@ class biSPOT:
             self.data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         if isinstance(init_data, list):
@@ -629,6 +643,7 @@ class biSPOT:
             self.data = self.data[r:]
         else:
             print('The initial data cannot be set')
+            logging.info('The initial data cannot be set')
             return
 
     def add(self, data):
@@ -648,6 +663,7 @@ class biSPOT:
             data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         self.data = np.append(self.data, data)
@@ -680,6 +696,9 @@ class biSPOT:
             print('Initial threshold : %s' % self.init_threshold)
             print('Number of peaks : %s' % self.Nt)
             print('Grimshaw maximum log-likelihood estimation ... ', end='')
+            logging.info(f'Initial threshold : {self.init_threshold}')
+            logging.info(f'Number of peaks : {self.Nt}')
+            logging.info('Grimshaw maximum log-likelihood estimation ...')
 
         l = {'up': None, 'down': None}
         for side in ['up', 'down']:
@@ -699,6 +718,14 @@ class biSPOT:
             print(form % ('likelihood', l['up'], l['down']))
             print(form % ('Extreme quantile', self.extreme_quantile['up'], self.extreme_quantile['down']))
             print('\t' + '-' * ltab * 3)
+            logging.info('[done]')
+            logging.info(f'\t{"Parameters".rjust(ltab)}{"Upper".rjust(ltab)}{"Lower".rjust(ltab)}')
+            logging.info(f'\t{"-" * ltab * 3}')
+            logging.info(form % (chr(0x03B3), self.gamma['up'], self.gamma['down']))
+            logging.info(form % (chr(0x03C3), self.sigma['up'], self.sigma['down']))
+            logging.info(form % ('likelihood', l['up'], l['down']))
+            logging.info(form % ('Extreme quantile', self.extreme_quantile['up'], self.extreme_quantile['down']))
+            logging.info(f'\t{"-" * ltab * 3}')
         return
 
     def _rootsFinder(fun, jac, bounds, npoints, method):
@@ -886,6 +913,7 @@ class biSPOT:
                 return self.init_threshold['down'] + sigma * log(r)
         else:
             print('error : the side is not right')
+            logging.info('error : the side is not right')
 
     def run(self, with_alarm=True):
         """
@@ -909,6 +937,8 @@ class biSPOT:
         """
         if (self.n > self.init_data.size):
             print('Warning : the algorithm seems to have already been run, you \
+            should initialize before running again')
+            logging.info('Warning : the algorithm seems to have already been run, you \
             should initialize before running again')
             return {}
 
@@ -1131,6 +1161,7 @@ class dSPOT:
             self.data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         if isinstance(init_data, list):
@@ -1148,6 +1179,7 @@ class dSPOT:
             self.data = self.data[r:]
         else:
             print('The initial data cannot be set')
+            logging.info('The initial data cannot be set')
             return
 
     def add(self, data):
@@ -1167,6 +1199,7 @@ class dSPOT:
             data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         self.data = np.append(self.data, data)
@@ -1198,6 +1231,9 @@ class dSPOT:
             print('Initial threshold : %s' % self.init_threshold)
             print('Number of peaks : %s' % self.Nt)
             print('Grimshaw maximum log-likelihood estimation ... ', end='')
+            logging.info(f'Initial threshold : {self.init_threshold}')
+            logging.info(f'Number of peaks : {self.Nt}')
+            logging.info('Grimshaw maximum log-likelihood estimation ...')
 
         g, s, l = self._grimshaw()
         self.extreme_quantile = self._quantile(g, s)
@@ -1208,6 +1244,11 @@ class dSPOT:
             print('\t' + chr(0x03C3) + ' = ' + str(s))
             print('\tL = ' + str(l))
             print('Extreme quantile (probability = %s): %s' % (self.proba, self.extreme_quantile))
+            logging.info('[done]')
+            logging.info(f'\t{chr(0x03B3)} = {g}')
+            logging.info(f'\t{chr(0x03C3)} = {s}')
+            logging.info(f'\tL = {l}')
+            logging.info(f'Extreme quantile (probability = {self.proba}): {self.extreme_quantile}')
 
         return
 
@@ -1408,6 +1449,8 @@ class dSPOT:
         """
         if (self.n > self.init_data.size):
             print('Warning : the algorithm seems to have already been run, you \
+            should initialize before running again')
+            logging.info('Warning : the algorithm seems to have already been run, you \
             should initialize before running again')
             return {}
 
@@ -1610,6 +1653,7 @@ class bidSPOT:
             self.data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         if isinstance(init_data, list):
@@ -1627,6 +1671,7 @@ class bidSPOT:
             self.data = self.data[r:]
         else:
             print('The initial data cannot be set')
+            logging.info('The initial data cannot be set')
             return
 
     def add(self, data):
@@ -1646,6 +1691,7 @@ class bidSPOT:
             data = data.values
         else:
             print('This data format (%s) is not supported' % type(data))
+            logging.info('This data format (%s) is not supported' % type(data))
             return
 
         self.data = np.append(self.data, data)
@@ -1680,6 +1726,9 @@ class bidSPOT:
             print('Initial threshold : %s' % self.init_threshold)
             print('Number of peaks : %s' % self.Nt)
             print('Grimshaw maximum log-likelihood estimation ... ', end='')
+            logging.info(f'Initial threshold : {self.init_threshold}')
+            logging.info(f'Number of peaks : {self.Nt}')
+            logging.info('Grimshaw maximum log-likelihood estimation ...')
 
         l = {'up': None, 'down': None}
         for side in ['up', 'down']:
@@ -1699,6 +1748,15 @@ class bidSPOT:
             print(form % ('likelihood', l['up'], l['down']))
             print(form % ('Extreme quantile', self.extreme_quantile['up'], self.extreme_quantile['down']))
             print('\t' + '-' * ltab * 3)
+            logging.info('[done]')
+            logging.info(f'\t{"Parameters".rjust(ltab)}{"Upper".rjust(ltab)}{"Lower".rjust(ltab)}')
+            logging.info(f'\t{"-" * ltab * 3}')
+            logging.info(form % (chr(0x03B3), self.gamma['up'], self.gamma['down']))
+            logging.info(form % (chr(0x03C3), self.sigma['up'], self.sigma['down']))
+            logging.info(form % ('likelihood', l['up'], l['down']))
+            logging.info(form % ('Extreme quantile', self.extreme_quantile['up'], self.extreme_quantile['down']))
+            logging.info(f'\t{"-" * ltab * 3}')
+
         return
 
     def _rootsFinder(fun, jac, bounds, npoints, method):
@@ -1886,6 +1944,7 @@ class bidSPOT:
                 return self.init_threshold['down'] + sigma * log(r)
         else:
             print('error : the side is not right')
+            logging.info('error : the side is not right')
 
     def run(self, with_alarm=True, plot=True):
         """
@@ -1909,6 +1968,8 @@ class bidSPOT:
         """
         if (self.n > self.init_data.size):
             print('Warning : the algorithm seems to have already been run, you \
+            should initialize before running again')
+            logging.info('Warning : the algorithm seems to have already been run, you \
             should initialize before running again')
             return {}
 

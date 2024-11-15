@@ -15,6 +15,8 @@ from omni_anomaly.utils import BatchSlidingWindow
 
 __all__ = ['Trainer']
 
+import logging
+logger = logging.getLogger(__name__)
 
 class Trainer(VarScopeObject):
     """
@@ -181,6 +183,112 @@ class Trainer(VarScopeObject):
         """
         return self._model
 
+    # def fit(self, values,
+    #         valid_portion=0.3, summary_dir=None):
+    #     """
+    #     Train the :class:`OmniAnomaly` model with given data.
+
+    #     Args:
+    #         values (np.ndarray): 1-D `float32` array, the standardized
+    #             KPI observations.
+    #         valid_portion (float): Ratio of validation data out of all the
+    #             specified training data. (default 0.3)
+    #         summary_dir (str): Optional summary directory for
+    #             :class:`tf.summary.FileWriter`. (default :obj:`None`,
+    #             summary is disabled)
+    #     """
+    #     sess = get_default_session_or_error()
+
+    #     # split the training & validation set
+    #     values = np.asarray(values, dtype=np.float32)
+    #     if len(values.shape) != 2:
+    #         raise ValueError('`values` must be a 2-D array')
+
+    #     n = int(len(values) * valid_portion)
+    #     train_values, v_x = values[:-n], values[-n:]
+
+    #     train_sliding_window = BatchSlidingWindow(
+    #         array_size=len(train_values),
+    #         window_size=self.model.window_length,
+    #         batch_size=self._batch_size,
+    #         shuffle=True,
+    #         ignore_incomplete_batch=True,
+    #     )
+    #     valid_sliding_window = BatchSlidingWindow(
+    #         array_size=len(v_x),
+    #         window_size=self.model.window_length,
+    #         batch_size=self._valid_batch_size,
+    #     )
+
+    #     # initialize the variables of the trainer, and the model
+    #     sess.run(self._trainer_initializer)
+    #     ensure_variables_initialized(self._train_params)
+
+    #     # training loop
+    #     lr = self._initial_lr
+    #     with TrainLoop(
+    #             param_vars=self._train_params,
+    #             early_stopping=True,
+    #             summary_dir=summary_dir,
+    #             max_epoch=self._max_epoch,
+    #             max_step=self._max_step) as loop:  # type: TrainLoop
+    #         loop.print_training_summary()
+
+    #         train_batch_time = []
+    #         valid_batch_time = []
+
+    #         for epoch in loop.iter_epochs():
+    #             print('train_values:', train_values.shape)
+    #             train_iterator = train_sliding_window.get_iterator([train_values])
+    #             start_time = time.time()
+    #             for step, (batch_x,) in loop.iter_steps(train_iterator):
+    #                 # run a training step
+    #                 start_batch_time = time.time()
+    #                 feed_dict = dict(six.iteritems(self._feed_dict))
+    #                 feed_dict[self._learning_rate] = lr
+    #                 feed_dict[self._input_x] = batch_x
+    #                 loss, _ = sess.run(
+    #                     [self._loss, self._train_op], feed_dict=feed_dict)
+    #                 loop.collect_metrics({'loss': loss})
+    #                 train_batch_time.append(time.time() - start_batch_time)
+
+    #                 if step % self._valid_step_freq == 0:
+    #                     train_duration = time.time() - start_time
+    #                     loop.collect_metrics({'train_time': train_duration})
+    #                     # collect variable summaries
+    #                     if summary_dir is not None:
+    #                         loop.add_summary(sess.run(self._summary_op))
+
+    #                     # do validation in batches
+    #                     with loop.timeit('valid_time'), \
+    #                             loop.metric_collector('valid_loss') as mc:
+    #                         v_it = valid_sliding_window.get_iterator([v_x])
+    #                         for (b_v_x,) in v_it:
+    #                             start_batch_time = time.time()
+    #                             feed_dict = dict(
+    #                                 six.iteritems(self._valid_feed_dict))
+    #                             feed_dict[self._input_x] = b_v_x
+    #                             loss = sess.run(self._loss, feed_dict=feed_dict)
+    #                             valid_batch_time.append(time.time() - start_batch_time)
+    #                             mc.collect(loss, weight=len(b_v_x))
+
+    #                     # print the logs of recent steps
+    #                     loop.print_logs()
+    #                     start_time = time.time()
+
+    #             # anneal the learning rate
+    #             if self._lr_anneal_epochs and \
+    #                     epoch % self._lr_anneal_epochs == 0:
+    #                 lr *= self._lr_anneal_factor
+    #                 loop.println('Learning rate decreased to {}'.format(lr),
+    #                              with_tag=True)
+
+    #         return {
+    #             'best_valid_loss': float(loop.best_valid_metric),
+    #             'train_time': np.mean(train_batch_time),
+    #             'valid_time': np.mean(valid_batch_time),
+    #         }
+
     def fit(self, values,
             valid_portion=0.3, summary_dir=None):
         """
@@ -236,50 +344,90 @@ class Trainer(VarScopeObject):
             valid_batch_time = []
 
             for epoch in loop.iter_epochs():
+                # Debug: Log the value of epoch
+                if epoch is None:
+                    logging.error(f"Epoch is None. Check the implementation of iter_epochs.")
+                    raise ValueError("Epoch is None.")
+                logging.debug(f"Epoch: {epoch}")
+
                 print('train_values:', train_values.shape)
                 train_iterator = train_sliding_window.get_iterator([train_values])
                 start_time = time.time()
+
                 for step, (batch_x,) in loop.iter_steps(train_iterator):
-                    # run a training step
+                    # Debug: Log the value of step
+                    if step is None:
+                        logging.error(f"Step is None. Check the implementation of iter_steps.")
+                        raise ValueError("Step is None.")
+                    logging.debug(f"Step: {step}")
+
+                    # Log step start time
                     start_batch_time = time.time()
+
                     feed_dict = dict(six.iteritems(self._feed_dict))
                     feed_dict[self._learning_rate] = lr
                     feed_dict[self._input_x] = batch_x
-                    loss, _ = sess.run(
-                        [self._loss, self._train_op], feed_dict=feed_dict)
+                    loss, _ = sess.run([self._loss, self._train_op], feed_dict=feed_dict)
+
                     loop.collect_metrics({'loss': loss})
-                    train_batch_time.append(time.time() - start_batch_time)
+
+                    # Log step time
+                    step_time = time.time() - start_batch_time
+                    train_batch_time.append(step_time)
+
+                    # Calculate mean and standard deviation of the loss
+                    loss_mean = np.mean(loss)
+                    loss_std = np.std(loss)
+
+                    # Log the training information for the current step
+                    print(epoch,self._max_epoch,step)
+                    logging.info(f"[Epoch {epoch}/{self._max_epoch}, Step {step}] "
+                                f"step time: {step_time:.3f}s (±{loss_std:.3f}s); "
+                                f"train time: {sum(train_batch_time):.1f}s; "
+                                f"valid time: {np.mean(valid_batch_time)/60:.2f}m; "
+                                f"loss: {loss_mean:.4f} (±{loss_std:.4f}); "
+                                f"valid loss: {loop.best_valid_metric if loop.best_valid_metric is not None else 'N/A'} (*)")
 
                     if step % self._valid_step_freq == 0:
+                        # Log train duration after a valid step
                         train_duration = time.time() - start_time
                         loop.collect_metrics({'train_time': train_duration})
+                        logging.info(f"[Epoch {epoch + 1}, Step {step}] train time: {train_duration/60:.2f}m")
+
                         # collect variable summaries
                         if summary_dir is not None:
                             loop.add_summary(sess.run(self._summary_op))
 
                         # do validation in batches
-                        with loop.timeit('valid_time'), \
-                                loop.metric_collector('valid_loss') as mc:
+                        with loop.timeit('valid_time'), loop.metric_collector('valid_loss') as mc:
                             v_it = valid_sliding_window.get_iterator([v_x])
+                            valid_loss_values = []
                             for (b_v_x,) in v_it:
                                 start_batch_time = time.time()
-                                feed_dict = dict(
-                                    six.iteritems(self._valid_feed_dict))
+                                feed_dict = dict(six.iteritems(self._valid_feed_dict))
                                 feed_dict[self._input_x] = b_v_x
-                                loss = sess.run(self._loss, feed_dict=feed_dict)
+                                valid_loss = sess.run(self._loss, feed_dict=feed_dict)
                                 valid_batch_time.append(time.time() - start_batch_time)
-                                mc.collect(loss, weight=len(b_v_x))
+                                mc.collect(valid_loss, weight=len(b_v_x))
+                                valid_loss_values.append(valid_loss)
+
+                            # Log validation time and loss
+                            valid_time = np.mean(valid_batch_time)
+                            valid_loss_mean = np.mean(valid_loss_values)
+                            valid_loss_std = np.std(valid_loss_values)
+                            logging.info(f"[Epoch {epoch + 1}, Step {step}] valid time: {valid_time/60:.2f}m, "
+                                        f"valid loss: {valid_loss_mean:.4f} (±{valid_loss_std:.4f})")
 
                         # print the logs of recent steps
                         loop.print_logs()
+
                         start_time = time.time()
 
-                # anneal the learning rate
-                if self._lr_anneal_epochs and \
-                        epoch % self._lr_anneal_epochs == 0:
+                # Anneal the learning rate
+                if self._lr_anneal_epochs and epoch % self._lr_anneal_epochs == 0:
                     lr *= self._lr_anneal_factor
-                    loop.println('Learning rate decreased to {}'.format(lr),
-                                 with_tag=True)
+                    loop.println(f'Learning rate decreased to {lr}', with_tag=True)
+                    logging.info(f"Learning rate decreased to {lr}")
 
             return {
                 'best_valid_loss': float(loop.best_valid_metric),
