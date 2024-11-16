@@ -194,6 +194,9 @@ class Trainer(VarScopeObject):
             summary_dir (str): Optional summary directory for
                 :class:`tf.summary.FileWriter`. (default :obj:`None`,
                 summary is disabled)
+            values:标准化后的时间序列数据
+            valid_portion:验证集在总数据中的比例,默认是0.3
+            summary_dir:保存训练摘要
         """
         sess = get_default_session_or_error()
 
@@ -202,9 +205,11 @@ class Trainer(VarScopeObject):
         if len(values.shape) != 2:
             raise ValueError('`values` must be a 2-D array')
 
+        # 划分数据比例
         n = int(len(values) * valid_portion)
         train_values, v_x = values[:-n], values[-n:]
 
+        # 创建一个训练数据的滑动窗口生成器
         train_sliding_window = BatchSlidingWindow(
             array_size=len(train_values),
             window_size=self.model.window_length,
@@ -212,6 +217,7 @@ class Trainer(VarScopeObject):
             shuffle=True,
             ignore_incomplete_batch=True,
         )
+        # 创建验证数据的滑动窗口生成器 
         valid_sliding_window = BatchSlidingWindow(
             array_size=len(v_x),
             window_size=self.model.window_length,
@@ -224,21 +230,24 @@ class Trainer(VarScopeObject):
 
         # training loop
         lr = self._initial_lr
+        # type: TrainLoop
         with TrainLoop(
                 param_vars=self._train_params,
                 early_stopping=True,
                 summary_dir=summary_dir,
                 max_epoch=self._max_epoch,
-                max_step=self._max_step) as loop:  # type: TrainLoop
+                max_step=self._max_step) as loop:
             loop.print_training_summary()
 
             train_batch_time = []
             valid_batch_time = []
 
+            # 遍历
             for epoch in loop.iter_epochs():
                 print('train_values:', train_values.shape)
                 train_iterator = train_sliding_window.get_iterator([train_values])
                 start_time = time.time()
+                # 遍历训练数据的每个批次
                 for step, (batch_x,) in loop.iter_steps(train_iterator):
                     # run a training step
                     start_batch_time = time.time()
@@ -250,6 +259,7 @@ class Trainer(VarScopeObject):
                     loop.collect_metrics({'loss': loss})
                     train_batch_time.append(time.time() - start_batch_time)
 
+                    # 间隔固定step执行验证
                     if step % self._valid_step_freq == 0:
                         train_duration = time.time() - start_time
                         loop.collect_metrics({'train_time': train_duration})
