@@ -58,6 +58,13 @@ def get_data(dataset, max_train_size=None, max_test_size=None, print_log=True, d
     x_dim = get_data_dim(dataset)
     f = open(os.path.join(prefix, dataset + '_train.pkl'), "rb")
     train_data = pickle.load(f).reshape((-1, x_dim))[train_start:train_end, :]
+    # f = open(os.path.join(prefix, dataset + '_train.pkl'), "rb")
+    # # train_data = pickle.load(f).reshape((-1, x_dim))[train_start:train_end, :]
+    # ###################################################################################################
+    # # 使用 numpy 加载 .pkl 文件
+    # with open(os.path.join(prefix, dataset + '_train.pkl'), 'rb') as f:
+    #     train_data = np.load(f, allow_pickle=True).reshape((-1, x_dim))[train_start:train_end, :]
+    # #####################################################################################################解决之前无法使用 pickle.load() 的问题
     f.close()
     try:
         f = open(os.path.join(prefix, dataset + '_test.pkl'), "rb")
