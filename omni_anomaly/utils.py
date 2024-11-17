@@ -8,6 +8,11 @@ from sklearn.preprocessing import MinMaxScaler
 prefix = "processed"
 
 
+# import logging
+
+# # 引用主程序中的日志记录器
+# logger = logging.getLogger(__name__)
+
 def save_z(z, filename='z'):
     """
     save the sampled z in a txt file
@@ -33,6 +38,11 @@ def get_data_dim(dataset):
         return 55
     elif str(dataset).startswith('machine'):
         return 38
+    # PSM的各类数据
+    elif dataset == 'PSM_down':
+        return 25
+    elif dataset == 'PSM':
+        return 25
     else:
         raise ValueError('unknown dataset '+str(dataset))
 
@@ -98,7 +108,14 @@ def preprocess(df):
 
     if np.any(sum(np.isnan(df)) != 0):
         print('Data contains null values. Will be replaced with 0')
-        df = np.nan_to_num()
+        # 定位 NaN 的行和列
+        # nan_indices = np.argwhere(np.isnan(df))
+        # print("NaN found at these indices (row, column):")
+        # for row, col in nan_indices:
+        #     print(f"Row {row}, Column {col}")
+        #     logging.info(f"Row {row}, Column {col}")
+        # 处理缺失值
+        df = np.nan_to_num(df)
 
     # normalize data
     df = MinMaxScaler().fit_transform(df)
