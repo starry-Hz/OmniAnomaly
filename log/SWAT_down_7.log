@@ -1,0 +1,1708 @@
+nohup: ignoring input
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tfsnippet/utils/tfver.py:22: DeprecationWarning: Function 'semver.compare' is deprecated. Deprecated since version 2.10.0.  This function will be removed in semver 3. Use the respective 'semver.VersionInfo.compare' instead.
+  compare_result = semver.compare(version, tf.__version__)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tfsnippet/utils/tfver.py:22: DeprecationWarning: Function 'semver.compare' is deprecated. Deprecated since version 2.10.0.  This function will be removed in semver 3. Use the respective 'semver.VersionInfo.compare' instead.
+  compare_result = semver.compare(version, tf.__version__)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+2024-12-09 21:32:01.982063: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Configurations
+===========================================
+{'batch_size': 50,
+ 'bf_search_max': 400.0,
+ 'bf_search_min': -400.0,
+ 'bf_search_step_size': 1.0,
+ 'dataset': 'SWAT_down',
+ 'dense_dim': 500,
+ 'early_stop': True,
+ 'get_score_on_dim': False,
+ 'gradient_clip_norm': 10.0,
+ 'initial_lr': 0.001,
+ 'l2_reg': 0.0001,
+ 'level': 0.001,
+ 'lr_anneal_epoch_freq': 40,
+ 'lr_anneal_factor': 0.5,
+ 'lr_anneal_step_freq': None,
+ 'max_epoch': 10,
+ 'max_test_size': None,
+ 'max_train_size': None,
+ 'nf_layers': 20,
+ 'posterior_flow_type': 'nf',
+ 'restore_dir': None,
+ 'result_dir': 'result',
+ 'rnn_cell': 'LSTM',
+ 'rnn_num_hidden': 500,
+ 'save_dir': 'model',
+ 'save_z': False,
+ 'std_epsilon': 0.0001,
+ 'test_batch_size': 50,
+ 'test_n_z': 1,
+ 'test_score_filename': 'test_score.pkl',
+ 'test_start': 0,
+ 'train_score_filename': 'train_score.pkl',
+ 'train_start': 0,
+ 'use_connected_z_p': True,
+ 'use_connected_z_q': True,
+ 'valid_step_freq': 100,
+ 'window_length': 100,
+ 'x_dim': 51,
+ 'z_dim': 3}
+
+load data of: SWAT_down
+train:  0 None
+test:  0 None
+Data normalized
+Data normalized
+train set shape:  (49680, 51)
+test set shape:  (7499, 51)
+test set label shape:  (7499,)
+Trainable Parameters                                            (2,640,266 in total)
+------------------------------------------------------------------------------------
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/gates/kernel             (551, 1000)  551,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/gates/bias               (1000,)        1,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/candidate/kernel         (551, 500)   275,500
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/candidate/bias           (500,)           500
+model/q_z_given_x/rnn_q_z/dense/kernel                          (500, 500)   250,000
+model/q_z_given_x/rnn_q_z/dense/bias                            (500,)           500
+model/q_z_given_x/rnn_q_z/dense_1/kernel                        (500, 500)   250,000
+model/q_z_given_x/rnn_q_z/dense_1/bias                          (500,)           500
+model/vae/variational/z_mean/kernel                             (503, 3)       1,509
+model/vae/variational/z_mean/bias                               (3,)               3
+model/vae/variational/z_std/kernel                              (503, 3)       1,509
+model/vae/variational/z_std/bias                                (3,)               3
+model/posterior_flow/_0/w                                       (1, 3)             3
+model/posterior_flow/_0/b                                       (1,)               1
+model/posterior_flow/_0/u                                       (1, 3)             3
+model/posterior_flow/_1/w                                       (1, 3)             3
+model/posterior_flow/_1/b                                       (1,)               1
+model/posterior_flow/_1/u                                       (1, 3)             3
+model/posterior_flow/_2/w                                       (1, 3)             3
+model/posterior_flow/_2/b                                       (1,)               1
+model/posterior_flow/_2/u                                       (1, 3)             3
+model/posterior_flow/_3/w                                       (1, 3)             3
+model/posterior_flow/_3/b                                       (1,)               1
+model/posterior_flow/_3/u                                       (1, 3)             3
+model/posterior_flow/_4/w                                       (1, 3)             3
+model/posterior_flow/_4/b                                       (1,)               1
+model/posterior_flow/_4/u                                       (1, 3)             3
+model/posterior_flow/_5/w                                       (1, 3)             3
+model/posterior_flow/_5/b                                       (1,)               1
+model/posterior_flow/_5/u                                       (1, 3)             3
+model/posterior_flow/_6/w                                       (1, 3)             3
+model/posterior_flow/_6/b                                       (1,)               1
+model/posterior_flow/_6/u                                       (1, 3)             3
+model/posterior_flow/_7/w                                       (1, 3)             3
+model/posterior_flow/_7/b                                       (1,)               1
+model/posterior_flow/_7/u                                       (1, 3)             3
+model/posterior_flow/_8/w                                       (1, 3)             3
+model/posterior_flow/_8/b                                       (1,)               1
+model/posterior_flow/_8/u                                       (1, 3)             3
+model/posterior_flow/_9/w                                       (1, 3)             3
+model/posterior_flow/_9/b                                       (1,)               1
+model/posterior_flow/_9/u                                       (1, 3)             3
+model/posterior_flow/_10/w                                      (1, 3)             3
+model/posterior_flow/_10/b                                      (1,)               1
+model/posterior_flow/_10/u                                      (1, 3)             3
+model/posterior_flow/_11/w                                      (1, 3)             3
+model/posterior_flow/_11/b                                      (1,)               1
+model/posterior_flow/_11/u                                      (1, 3)             3
+model/posterior_flow/_12/w                                      (1, 3)             3
+model/posterior_flow/_12/b                                      (1,)               1
+model/posterior_flow/_12/u                                      (1, 3)             3
+model/posterior_flow/_13/w                                      (1, 3)             3
+model/posterior_flow/_13/b                                      (1,)               1
+model/posterior_flow/_13/u                                      (1, 3)             3
+model/posterior_flow/_14/w                                      (1, 3)             3
+model/posterior_flow/_14/b                                      (1,)               1
+model/posterior_flow/_14/u                                      (1, 3)             3
+model/posterior_flow/_15/w                                      (1, 3)             3
+model/posterior_flow/_15/b                                      (1,)               1
+model/posterior_flow/_15/u                                      (1, 3)             3
+model/posterior_flow/_16/w                                      (1, 3)             3
+model/posterior_flow/_16/b                                      (1,)               1
+model/posterior_flow/_16/u                                      (1, 3)             3
+model/posterior_flow/_17/w                                      (1, 3)             3
+model/posterior_flow/_17/b                                      (1,)               1
+model/posterior_flow/_17/u                                      (1, 3)             3
+model/posterior_flow/_18/w                                      (1, 3)             3
+model/posterior_flow/_18/b                                      (1,)               1
+model/posterior_flow/_18/u                                      (1, 3)             3
+model/posterior_flow/_19/w                                      (1, 3)             3
+model/posterior_flow/_19/b                                      (1,)               1
+model/posterior_flow/_19/u                                      (1, 3)             3
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/gates/kernel      (503, 1000)  503,000
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/gates/bias        (1000,)        1,000
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/candidate/kernel  (503, 500)   251,500
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/candidate/bias    (500,)           500
+model/p_x_given_z/hidden/rnn_p_x/dense/kernel                   (500, 500)   250,000
+model/p_x_given_z/hidden/rnn_p_x/dense/bias                     (500,)           500
+model/p_x_given_z/hidden/rnn_p_x/dense_1/kernel                 (500, 500)   250,000
+model/p_x_given_z/hidden/rnn_p_x/dense_1/bias                   (500,)           500
+model/p_x_given_z/x_mean/kernel                                 (500, 51)     25,500
+model/p_x_given_z/x_mean/bias                                   (51,)             51
+model/p_x_given_z/x_std/kernel                                  (500, 51)     25,500
+model/p_x_given_z/x_std/bias                                    (51,)             51
+
+train_values: (34776, 51)
+[Epoch 1/10, Step 100] step time: 1.577s (±9.162s); train time: 1m 6.889s; valid time: 1m 31.01s; loss: -8.18557 (±59.8435); valid loss: -47.0833 (*)
+[Epoch 1/10, Step 200] step time: 1.413s (±8.84s); train time: 52.51s; valid time: 1m 28.84s; loss: -33.5271 (±12.3539); valid loss: -40.1273
+[Epoch 1/10, Step 300] step time: 1.377s (±8.689s); train time: 50.51s; valid time: 1m 27.31s; loss: -40.8234 (±15.5869); valid loss: -48.5886 (*)
+[Epoch 1/10, Step 400] step time: 1.366s (±8.678s); train time: 49.43s; valid time: 1m 27.24s; loss: -50.6939 (±7.72684); valid loss: -62.8756 (*)
+[Epoch 1/10, Step 500] step time: 1.348s (±8.488s); train time: 49.63s; valid time: 1m 25.27s; loss: -50.9014 (±9.96701); valid loss: -62.7102
+[Epoch 1/10, Step 600] step time: 1.348s (±8.502s); train time: 49.5s; valid time: 1m 25.43s; loss: -52.8645 (±9.12062); valid loss: -58.0082
+train_values: (34776, 51)
+[Epoch 2/10, Step 700, ETA 2h 25m 20.37s] step time: 1.361s (±8.629s); train time: 3.535s; valid time: 1m 26.7s; loss: -58.1722 (±8.37635); valid loss: -68.1 (*)
+[Epoch 2/10, Step 800, ETA 2h 22m 29.55s] step time: 1.359s (±8.566s); train time: 49.86s; valid time: 1m 26.09s; loss: -55.5802 (±11.8745); valid loss: -67.4284
+[Epoch 2/10, Step 900, ETA 2h 19m 46.23s] step time: 1.358s (±8.525s); train time: 50.24s; valid time: 1m 25.67s; loss: -54.975 (±10.9542); valid loss: -51.1522
+[Epoch 2/10, Step 1000, ETA 2h 17m 7.457s] step time: 1.357s (±8.523s); train time: 50.06s; valid time: 1m 25.69s; loss: -44.2326 (±12.2473); valid loss: -50.678
+[Epoch 2/10, Step 1100, ETA 2h 14m 29.87s] step time: 1.351s (±8.511s); train time: 49.64s; valid time: 1m 25.54s; loss: -47.0078 (±13.1078); valid loss: -51.8013
+[Epoch 2/10, Step 1200, ETA 2h 12m 7.043s] step time: 1.374s (±8.704s); train time: 50s; valid time: 1m 27.49s; loss: -55.1243 (±8.9819); valid loss: -71.5315 (*)
+[Epoch 2/10, Step 1300, ETA 2h 9m 52s] step time: 1.39s (±8.897s); train time: 49.72s; valid time: 1m 29.38s; loss: -52.8514 (±12.185); valid loss: -59.4021
+train_values: (34776, 51)
+[Epoch 3/10, Step 1400, ETA 2h 7m 22.76s] step time: 1.355s (±8.501s); train time: 7.272s; valid time: 1m 25.41s; loss: -50.5094 (±15.8583); valid loss: -64.663
+[Epoch 3/10, Step 1500, ETA 2h 4m 59.51s] step time: 1.367s (±8.657s); train time: 49.77s; valid time: 1m 27.04s; loss: -60.1736 (±7.25752); valid loss: -74.7763 (*)
+[Epoch 3/10, Step 1600, ETA 2h 2m 32.78s] step time: 1.354s (±8.499s); train time: 50.09s; valid time: 1m 25.44s; loss: -61.1626 (±9.91626); valid loss: 4.0375
+[Epoch 3/10, Step 1700, ETA 2h 7.658s] step time: 1.355s (±8.555s); train time: 49.64s; valid time: 1m 25.98s; loss: -55.0828 (±17.5246); valid loss: -52.8508
+[Epoch 3/10, Step 1800, ETA 1h 57m 44.82s] step time: 1.36s (±8.58s); train time: 49.81s; valid time: 1m 26.24s; loss: -61.5995 (±11.1397); valid loss: -75.3791 (*)
+[Epoch 3/10, Step 1900, ETA 1h 55m 20.82s] step time: 1.353s (±8.536s); train time: 49.57s; valid time: 1m 25.77s; loss: -65.9852 (±15.8227); valid loss: -74.9598
+[Epoch 3/10, Step 2000, ETA 1h 53m 1.174s] step time: 1.367s (±8.665s); train time: 49.67s; valid time: 1m 27.08s; loss: -65.9284 (±10.588); valid loss: -81.8816 (*)
+train_values: (34776, 51)
+[Epoch 4/10, Step 2100, ETA 1h 50m 36.91s] step time: 1.345s (±8.491s); train time: 10.41s; valid time: 1m 25.36s; loss: -62.6508 (±19.9026); valid loss: -78.4838
+[Epoch 4/10, Step 2200, ETA 1h 48m 13.38s] step time: 1.345s (±8.481s); train time: 49.34s; valid time: 1m 25.22s; loss: -59.7051 (±19.528); valid loss: -73.4372
+[Epoch 4/10, Step 2300, ETA 1h 45m 49.7s] step time: 1.34s (±8.443s); train time: 49.27s; valid time: 1m 24.83s; loss: -64.2553 (±12.8775); valid loss: -70.3023
+[Epoch 4/10, Step 2400, ETA 1h 43m 26.26s] step time: 1.337s (±8.425s); train time: 49.15s; valid time: 1m 24.65s; loss: -66.219 (±11.5847); valid loss: -79.576
+[Epoch 4/10, Step 2500, ETA 1h 41m 11.47s] step time: 1.382s (±8.742s); train time: 50.4s; valid time: 1m 27.85s; loss: -63.6629 (±15.3785); valid loss: -71.7611
+[Epoch 4/10, Step 2600, ETA 1h 38m 49.67s] step time: 1.341s (±8.424s); train time: 49.53s; valid time: 1m 24.67s; loss: -67.7454 (±16.7406); valid loss: -80.8047
+[Epoch 4/10, Step 2700, ETA 1h 36m 28.25s] step time: 1.34s (±8.457s); train time: 49.06s; valid time: 1m 25.02s; loss: -64.6059 (±18.9165); valid loss: -71.0431
+train_values: (34776, 51)
+[Epoch 5/10, Step 2800, ETA 1h 34m 8.023s] step time: 1.344s (±8.447s); train time: 14s; valid time: 1m 24.9s; loss: -64.1665 (±17.4716); valid loss: -74.9572
+[Epoch 5/10, Step 2900, ETA 1h 31m 48.58s] step time: 1.347s (±8.513s); train time: 49.25s; valid time: 1m 25.57s; loss: -65.1088 (±16.3566); valid loss: -79.5383
+[Epoch 5/10, Step 3000, ETA 1h 29m 28.76s] step time: 1.342s (±8.412s); train time: 49.74s; valid time: 1m 24.56s; loss: -64.8824 (±14.8772); valid loss: -73.2227
+[Epoch 5/10, Step 3100, ETA 1h 27m 10.2s] step time: 1.349s (±8.489s); train time: 49.75s; valid time: 1m 25.28s; loss: -64.3248 (±15.9279); valid loss: -75.1217
+[Epoch 5/10, Step 3200, ETA 1h 24m 50.77s] step time: 1.34s (±8.444s); train time: 49.24s; valid time: 1m 24.85s; loss: -64.0526 (±18.7307); valid loss: -72.4874
+[Epoch 5/10, Step 3300, ETA 1h 22m 31.95s] step time: 1.343s (±8.427s); train time: 49.65s; valid time: 1m 24.71s; loss: -64.4102 (±16.3306); valid loss: -77.7194
+[Epoch 5/10, Step 3400, ETA 1h 20m 13.52s] step time: 1.344s (±8.466s); train time: 49.39s; valid time: 1m 25.09s; loss: -62.8057 (±23.4002); valid loss: -74.2953
+train_values: (34776, 51)
+[Epoch 6/10, Step 3500, ETA 1h 17m 55.37s] step time: 1.344s (±8.472s); train time: 17.2s; valid time: 1m 25.14s; loss: -64.601 (±19.086); valid loss: -73.4015
+[Epoch 6/10, Step 3600, ETA 1h 15m 39.83s] step time: 1.371s (±8.7s); train time: 49.69s; valid time: 1m 27.45s; loss: -60.0646 (±28.3055); valid loss: -65.0956
+[Epoch 6/10, Step 3700, ETA 1h 13m 25.1s] step time: 1.381s (±8.626s); train time: 51.51s; valid time: 1m 26.66s; loss: -64.9753 (±12.325); valid loss: -84.0064 (*)
+[Epoch 6/10, Step 3800, ETA 1h 11m 7.26s] step time: 1.345s (±8.404s); train time: 50.14s; valid time: 1m 24.47s; loss: -14.7959 (±469.696); valid loss: -70.9428
+[Epoch 6/10, Step 3900, ETA 1h 8m 49.83s] step time: 1.348s (±8.51s); train time: 49.42s; valid time: 1m 25.5s; loss: -61.4861 (±40.7184); valid loss: -77.2712
+[Epoch 6/10, Step 4000, ETA 1h 6m 32.76s] step time: 1.352s (±8.466s); train time: 50.17s; valid time: 1m 25.08s; loss: -62.6901 (±26.2291); valid loss: -72.9831
+[Epoch 6/10, Step 4100, ETA 1h 4m 15.68s] step time: 1.35s (±8.505s); train time: 49.62s; valid time: 1m 25.47s; loss: -67.4856 (±15.4923); valid loss: -82.472
+train_values: (34776, 51)
+[Epoch 7/10, Step 4200, ETA 1h 1m 58.93s] step time: 1.353s (±8.485s); train time: 21.46s; valid time: 1m 25.31s; loss: -67.8092 (±18.6476); valid loss: -35.0432
+[Epoch 7/10, Step 4300, ETA 59m 41.73s] step time: 1.345s (±8.429s); train time: 49.89s; valid time: 1m 24.73s; loss: -64.0185 (±17.772); valid loss: -77.6984
+[Epoch 7/10, Step 4400, ETA 57m 24.16s] step time: 1.337s (±8.431s); train time: 49.09s; valid time: 1m 24.69s; loss: -64.5345 (±22.5905); valid loss: -80.1838
+[Epoch 7/10, Step 4500, ETA 55m 7.105s] step time: 1.343s (±8.463s); train time: 49.37s; valid time: 1m 25.06s; loss: -65.1645 (±14.5529); valid loss: -77.9682
+[Epoch 7/10, Step 4600, ETA 52m 50.03s] step time: 1.341s (±8.475s); train time: 48.99s; valid time: 1m 25.17s; loss: -67.5077 (±16.7697); valid loss: -72.1385
+[Epoch 7/10, Step 4700, ETA 50m 33.15s] step time: 1.342s (±8.481s); train time: 49.06s; valid time: 1m 25.23s; loss: -67.2726 (±10.7777); valid loss: -80.5128
+[Epoch 7/10, Step 4800, ETA 48m 18.26s] step time: 1.385s (±8.917s); train time: 48.95s; valid time: 1m 29.61s; loss: -68.76 (±14.4339); valid loss: -75.4928
+train_values: (34776, 51)
+[Epoch 8/10, Step 4900, ETA 46m 1.352s] step time: 1.339s (±8.433s); train time: 24.34s; valid time: 1m 24.74s; loss: -68.6011 (±17.2741); valid loss: -75.1816
+[Epoch 8/10, Step 5000, ETA 43m 44.77s] step time: 1.345s (±8.479s); train time: 49.36s; valid time: 1m 25.22s; loss: -64.9829 (±28.1032); valid loss: -72.4405/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+<string>:6: DeprecationWarning: Calling nonzero on 0d arrays is deprecated, as it behaves surprisingly. Use `atleast_1d(arr).nonzero()` if the old behavior was intended.
+<string>:6: DeprecationWarning: Calling nonzero on 0d arrays is deprecated, as it behaves surprisingly. Use `atleast_1d(arr).nonzero()` if the old behavior was intended.
+INFO:tensorflow:Restoring parameters from /tmp/tmpjbljww1h/variables.dat-6600
+2024-12-10 00:08:17,240 [INFO] tensorflow: Restoring parameters from /tmp/tmpjbljww1h/variables.dat-6600
+<string>:6: DeprecationWarning: Calling nonzero on 0d arrays is deprecated, as it behaves surprisingly. Use `atleast_1d(arr).nonzero()` if the old behavior was intended.
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:542: DeprecationWarning: np.asscalar(a) is deprecated since NumPy v1.16, use a.item() instead
+  append_fn(tensor_proto, proto_values)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/tensor_util.py:507: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  tensor_proto.tensor_content = nparray.tostring()
+<string>:6: DeprecationWarning: Calling nonzero on 0d arrays is deprecated, as it behaves surprisingly. Use `atleast_1d(arr).nonzero()` if the old behavior was intended.
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:350: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring().strip(b'\x00').strip()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:329: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring()
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/scipy/optimize/lbfgsb.py:350: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  task_str = task.tostring().strip(b'\x00').strip()
+  0%|          | 0/7400 [00:00<?, ?it/s]100%|██████████| 7400/7400 [00:00<00:00, 744152.33it/s]
+
+[Epoch 8/10, Step 5100, ETA 41m 28.36s] step time: 1.348s (±8.4s); train time: 50.41s; valid time: 1m 24.44s; loss: -69.0797 (±11.2804); valid loss: -82.0598
+[Epoch 8/10, Step 5200, ETA 39m 12.03s] step time: 1.348s (±8.466s); train time: 49.84s; valid time: 1m 25.09s; loss: -71.3119 (±15.1123); valid loss: -81.4201
+[Epoch 8/10, Step 5300, ETA 36m 55.7s] step time: 1.346s (±8.487s); train time: 49.41s; valid time: 1m 25.31s; loss: -70.0819 (±12.572); valid loss: -73.5092
+[Epoch 8/10, Step 5400, ETA 34m 39.29s] step time: 1.342s (±8.418s); train time: 49.68s; valid time: 1m 24.59s; loss: -66.0461 (±15.7466); valid loss: -76.1704
+[Epoch 8/10, Step 5500, ETA 32m 23.05s] step time: 1.345s (±8.419s); train time: 49.96s; valid time: 1m 24.62s; loss: -70.7266 (±13.4891); valid loss: -81.5011
+train_values: (34776, 51)
+[Epoch 9/10, Step 5600, ETA 30m 6.839s] step time: 1.343s (±8.462s); train time: 27.41s; valid time: 1m 25.07s; loss: -70.701 (±16.9239); valid loss: -79.657
+[Epoch 9/10, Step 5700, ETA 27m 50.59s] step time: 1.339s (±8.462s); train time: 48.97s; valid time: 1m 25.05s; loss: -68.4699 (±21.518); valid loss: -72.9808
+[Epoch 9/10, Step 5800, ETA 25m 34.55s] step time: 1.346s (±8.456s); train time: 49.66s; valid time: 1m 25.01s; loss: -70.8277 (±9.87254); valid loss: -78.7728
+[Epoch 9/10, Step 5900, ETA 23m 18.58s] step time: 1.348s (±8.523s); train time: 49.29s; valid time: 1m 25.58s; loss: -66.6122 (±21.567); valid loss: -73.3671
+[Epoch 9/10, Step 6000, ETA 21m 3.329s] step time: 1.391s (±8.499s); train time: 53.84s; valid time: 1m 25.36s; loss: -69.799 (±16.6011); valid loss: -79.5372
+[Epoch 9/10, Step 6100, ETA 18m 47.31s] step time: 1.344s (±8.443s); train time: 49.62s; valid time: 1m 24.88s; loss: -64.9213 (±19.4475); valid loss: -75.6572
+[Epoch 9/10, Step 6200, ETA 16m 31.3s] step time: 1.341s (±8.411s); train time: 49.66s; valid time: 1m 24.55s; loss: -65.6624 (±37.3684); valid loss: -72.696
+train_values: (34776, 51)
+[Epoch 10/10, Step 6300, ETA 14m 15.21s] step time: 1.328s (±8.346s); train time: 31.01s; valid time: 1m 23.87s; loss: -71.4445 (±19.4246); valid loss: -73.9368
+[Epoch 10/10, Step 6400, ETA 11m 59.37s] step time: 1.344s (±8.435s); train time: 49.74s; valid time: 1m 24.78s; loss: -70.1831 (±16.614); valid loss: -80.7846
+[Epoch 10/10, Step 6500, ETA 9m 43.47s] step time: 1.332s (±8.371s); train time: 49.14s; valid time: 1m 24.12s; loss: -68.8669 (±21.5278); valid loss: -83.6255
+[Epoch 10/10, Step 6600, ETA 7m 27.81s] step time: 1.362s (±8.655s); train time: 49.3s; valid time: 1m 26.99s; loss: -70.244 (±14.6578); valid loss: -87.0925 (*)
+[Epoch 10/10, Step 6700, ETA 5m 12.05s] step time: 1.339s (±8.425s); train time: 49.32s; valid time: 1m 24.69s; loss: -73.9532 (±14.1811); valid loss: -77.8644
+[Epoch 10/10, Step 6800, ETA 2m 56.35s] step time: 1.342s (±8.488s); train time: 48.98s; valid time: 1m 25.32s; loss: -71.5084 (±12.0413); valid loss: -69.23
+[Epoch 10/10, Step 6900, ETA 40.69s] step time: 1.332s (±8.45s); train time: 48.4s; valid time: 1m 24.92s; loss: -69.2131 (±14.9084); valid loss: -72.2919
+------------------------------ testing ------------------------------
+search range:  -400.0 400.0
+cur thr:  -399.0 [0.5551469350198515, 0.42991238779779484, 0.7833523285820715, 687.0, 5612.0, 911.0, 190.0, 6.999930000699993] [0.5551469350198515, 0.42991238779779484, 0.7833523285820715, 687.0, 5612.0, 911.0, 190.0, 6.999930000699993] -399.0
+cur thr:  -349.0 [0.557649107740004, 0.43052108914068804, 0.7913340844773765, 694.0, 5605.0, 918.0, 183.0, 6.454486777392933] [0.5578732442300481, 0.430788327555628, 0.7913340844773765, 694.0, 5606.0, 917.0, 183.0, 6.454486777392933] -352.0
+cur thr:  -299.0 [0.5563080618555789, 0.42892459561851304, 0.7913340844773765, 694.0, 5599.0, 924.0, 183.0, 6.454486777392933] [0.5578732442300481, 0.430788327555628, 0.7913340844773765, 694.0, 5606.0, 917.0, 183.0, 6.454486777392933] -352.0
+cur thr:  -249.0 [0.567584398739448, 0.4343617638574606, 0.8187001046898505, 718.0, 5588.0, 935.0, 159.0, 6.384566272567135] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  -199.0 [0.5646828540257834, 0.43097238636871316, 0.8187001046898505, 718.0, 5575.0, 948.0, 159.0, 5.53841893523896] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  -149.0 [0.5609329912867727, 0.42661912996661244, 0.8187001046898505, 718.0, 5558.0, 965.0, 159.0, 5.53841893523896] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  -99.0 [0.5563690077086987, 0.4213614998746391, 0.8187001046898505, 718.0, 5537.0, 986.0, 159.0, 5.53841893523896] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  -49.0 [0.5509074063531018, 0.4131054107515361, 0.8266818605851556, 725.0, 5493.0, 1030.0, 152.0, 5.357104592110057] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  1.0 [0.4846961926076332, 0.33124215670747736, 0.9030786670116457, 792.0, 4924.0, 1599.0, 85.0, 2.9545320248544327] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  51.0 [0.21335413295282732, 0.1194172111663709, 0.9999999885974916, 877.0, 56.0, 6467.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  101.0 [0.21191063360815518, 0.11851351335336012, 0.9999999885974916, 877.0, 0.0, 6523.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  151.0 [0.21191063360815518, 0.11851351335336012, 0.9999999885974916, 877.0, 0.0, 6523.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  201.0 [0.21191063360815518, 0.11851351335336012, 0.9999999885974916, 877.0, 0.0, 6523.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  251.0 [0.21191063360815518, 0.11851351335336012, 0.9999999885974916, 877.0, 0.0, 6523.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  301.0 [0.21191063360815518, 0.11851351335336012, 0.9999999885974916, 877.0, 0.0, 6523.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+cur thr:  351.0 [0.21191063360815518, 0.11851351335336012, 0.9999999885974916, 877.0, 0.0, 6523.0, 0.0, 0.0] [0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+[0.5678088300555227, 0.4346246947056617, 0.8187001046898505, 718.0, 5589.0, 934.0, 159.0, 6.384566272567135] -266.0
+Initial threshold : 242.78047
+Number of peaks : 49
+Grimshaw maximum log-likelihood estimation ... [done]
+	γ = 0
+	σ = 45.594444
+	L = 236.16950777803
+Extreme quantile (probability = 0.001): 242.2430319534417
+1321
+7400
+POT result:  (0.5671360679373076, 0.4338368553846716, 0.8187001046898505, 718.0, 5586.0, 937.0, 159.0) -242.77306384709183 6.384566272567135
+==============================result==============================
+{'FN': 159.0,
+ 'FP': 934.0,
+ 'TN': 5589.0,
+ 'TP': 718.0,
+ 'best-f1': 0.5678088300555227,
+ 'best_valid_loss': -87.09253344266897,
+ 'latency': 6.384566272567135,
+ 'pot-FN': 159.0,
+ 'pot-FP': 937.0,
+ 'pot-TN': 5586.0,
+ 'pot-TP': 718.0,
+ 'pot-f1': 0.5671360679373076,
+ 'pot-latency': 6.384566272567135,
+ 'pot-precision': 0.4338368553846716,
+ 'pot-recall': 0.8187001046898505,
+ 'pot-threshold': -242.77306384709183,
+ 'precision': 0.4346246947056617,
+ 'pred_time': 0.2883508801460266,
+ 'pred_total_time': 42.7775182723999,
+ 'recall': 0.8187001046898505,
+ 'threshold': -266.0,
+ 'train_time': 937.5502036809921,
+ 'valid_time': 0.28705461940961763}

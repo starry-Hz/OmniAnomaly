@@ -43,6 +43,14 @@ def get_data_dim(dataset):
         return 25
     elif dataset == 'PSM':
         return 25
+    elif dataset == 'SWAT_down':
+        return 51
+    elif dataset == 'WADI_down':
+        return 123
+    elif dataset == 'HVAC_origin':
+        return 21
+    elif dataset == 'els_origin':
+        return 17
     else:
         raise ValueError('unknown dataset '+str(dataset))
 

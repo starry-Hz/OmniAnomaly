@@ -49,6 +49,8 @@ def load_data(dataset):
         with open(os.path.join(dataset_folder, 'labeled_anomalies.csv'), 'r') as file:
             csv_reader = csv.reader(file, delimiter=',')
             res = [row for row in csv_reader][1:]
+            # print(f"res: {res}")
+        print("------------------------------------------------------")
         # 将 res 列表按每一行的第一个元素（通常是文件名）进行排序。这是为了确保处理数据时按正确的顺序加载数据
         res = sorted(res, key=lambda k: k[0])
         label_folder = os.path.join(dataset_folder, 'test_label')
@@ -59,11 +61,14 @@ def load_data(dataset):
         labels = []
         for row in data_info:
             anomalies = ast.literal_eval(row[2])    # 将字符串形式的异常位置转换为 Python 对象（列表）。例如，row[2] 可能是 [(10, 20), (30, 40)]，表示异常的区间
+            print(f"{row[0]},anomalies: {anomalies}")    # anomalies: [[4690, 4774]]
             length = int(row[-1])
+            # print(f"{row[0]},length: {length}")  # length: 7752
             # label = np.zeros([length], dtype=np.bool)
             label = np.zeros([length], dtype=bool)  # 使用内建的 bool 类型
             for anomaly in anomalies:   # 将异常的位置标记为 True
-                label[anomaly[0]:anomaly[1] + 1] = True
+                print(f"anomaly: {anomaly}")    # anomaly: [4690, 4774]
+                label[anomaly[0]:anomaly[1] + 1] = True   # 将异常区间 [anomaly[0], anomaly[1]] 的对应位置标记为 True。
             labels.extend(label)
         labels = np.asarray(labels) # 将 labels 列表转换为 NumPy 数组
         print(dataset, 'test_label', labels.shape)
@@ -101,6 +106,6 @@ if __name__ == '__main__':
     #     Usage: python data_preprocess.py <datasets>
     #     where <datasets> should be one of ['SMD', 'SMAP', 'MSL']
     #     """)
-    dataset = 'MSL'
+    dataset = 'SMAP'
     # dataset = ['SMAP', 'MSL']
     load_data(dataset)
