@@ -19,7 +19,7 @@ from omni_anomaly.model import OmniAnomaly
 from omni_anomaly.prediction import Predictor
 from omni_anomaly.training import Trainer
 from omni_anomaly.utils import get_data_dim, get_data, save_z
-
+from datetime import datetime
 
 class ExpConfig(Config):
     # dataset configuration
@@ -90,7 +90,8 @@ def main():
         level='INFO',
         format='%(asctime)s [%(levelname)s] %(name)s: %(message)s'
     )
-
+    train_start_time = time.time()
+    print('train start time: ', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     # prepare the data
     (x_train, _), (x_test, y_test) = \
         get_data(config.dataset, config.max_train_size, config.max_test_size, train_start=config.train_start,
@@ -127,12 +128,20 @@ def main():
                 # train the model
                 train_start = time.time()
                 best_valid_metrics = trainer.fit(x_train)
+                # 平均每个epoch的训练时间
                 train_time = (time.time() - train_start) / config.max_epoch
                 best_valid_metrics.update({
                     'train_time': train_time
                 })
+                train_end_time = time.time()
+                print('train end time: ', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                print('train time: ', train_end_time - train_start_time)
+                
             else:
                 best_valid_metrics = {}
+
+            test_start_time = time.time()
+            print('test start time: ', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
             # get score of train set for POT algorithm
             train_score, train_z, train_pred_speed = predictor.get_score(x_train)
@@ -146,6 +155,7 @@ def main():
                 # get score of test set
                 test_start = time.time()
                 test_score, test_z, pred_speed = predictor.get_score(x_test)
+                # test_time整个测试集的总预测时间,pred_speed每个预测样本的平均预测速度
                 test_time = time.time() - test_start
                 if config.save_z:
                     save_z(test_z, 'test_z')
@@ -153,6 +163,10 @@ def main():
                     'pred_time': pred_speed,
                     'pred_total_time': test_time
                 })
+                # test_end_time = time.time()
+                # print('test end time: ', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                # print('test time: ', test_end_time - test_start_time)
+                
                 if config.test_score_filename is not None:
                     with open(os.path.join(config.result_dir, config.test_score_filename), 'wb') as file:
                         pickle.dump(test_score, file)
@@ -187,6 +201,9 @@ def main():
                     })
                     best_valid_metrics.update(pot_result)
                 results.update_metrics(best_valid_metrics)
+                test_end_time = time.time()
+                print('test end time: ', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                print('test time: ', test_end_time - test_start_time)
 
             if config.save_dir is not None:
                 # save the variables

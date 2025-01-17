@@ -51,6 +51,8 @@ def get_data_dim(dataset):
         return 21
     elif dataset == 'els_origin':
         return 17
+    elif dataset == 'hydrogen_origin':
+        return 98
     else:
         raise ValueError('unknown dataset '+str(dataset))
 

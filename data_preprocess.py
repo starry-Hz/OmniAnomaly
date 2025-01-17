@@ -37,6 +37,7 @@ def load_data(dataset):
         dataset_folder = 'ServerMachineDataset'
         # 列出 train 文件夹中的所有文件 (os.listdir())，并遍历文件名
         file_list = os.listdir(os.path.join(dataset_folder, "train"))
+        file_list = ['machine-1-1.txt','machine-1-6.txt',  'machine-2-1.txt', 'machine-2-2.txt','machine-2-3.txt', 'machine-2-4.txt','machine-3-3.txt', 'machine-3-10.txt',]
         # 对每个以 .txt 结尾的文件，调用 load_and_save() 函数三次：
         for filename in file_list:
             if filename.endswith('.txt'):
@@ -106,6 +107,6 @@ if __name__ == '__main__':
     #     Usage: python data_preprocess.py <datasets>
     #     where <datasets> should be one of ['SMD', 'SMAP', 'MSL']
     #     """)
-    dataset = 'SMAP'
+    dataset = 'SMD'
     # dataset = ['SMAP', 'MSL']
     load_data(dataset)
