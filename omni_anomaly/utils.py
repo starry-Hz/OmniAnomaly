@@ -38,6 +38,8 @@ def get_data_dim(dataset):
         return 55
     elif str(dataset).startswith('machine'):
         return 38
+    elif str(dataset).startswith('omi'):
+        return 19
     # PSM的各类数据
     elif dataset == 'PSM_down':
         return 25
