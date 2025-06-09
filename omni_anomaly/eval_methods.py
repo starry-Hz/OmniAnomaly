@@ -162,11 +162,26 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
     total_weight = 0  # IPS加权的权重
     feature_dim = feature_scores.shape[1]  # 维度数
 
+    # 计算 y_true 中的异常段
+    anomaly_segments = []
+    in_anomaly = False
+    start_idx = 0
+    for i, val in enumerate(y_true):
+        if val > 0 and not in_anomaly:
+            in_anomaly = True
+            start_idx = i
+        elif val == 0 and in_anomaly:
+            in_anomaly = False
+            anomaly_segments.append((start_idx, i - 1))
+    if in_anomaly:  # 如果最后一个点是异常
+        anomaly_segments.append((start_idx, len(y_true) - 1))
+
     print("\n=== 全局调试信息 ===")
     print(f"y_true shape: {y_true.shape}, unique values: {np.unique(y_true)}")
     print(f"y_pred shape: {y_pred.shape}, unique values: {np.unique(y_pred)}")
     print(f"feature_scores shape: {feature_scores.shape}")
-    print(f"总段数: {len(segments)}\n")
+    print(f"总段数: {len(segments)}")
+    print(f"y_true 中的异常段: {anomaly_segments}\n")
 
     for i, (start, end, gt_dims_raw) in enumerate(segments):
         print(f"\n=== 处理第 {i + 1}/{len(segments)} 段 ===")
@@ -179,9 +194,11 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
 
         print(f"段内真实标签 (seg_true): {seg_true}")
         print(f"段内预测标签 (seg_pred): {seg_pred}")
-        print(f"段内是否有预测为异常的时间点: {np.any(seg_pred == 1)}")
+        print(f"段内真实异常时间点索引 (相对段内): {np.where(seg_true > 0)[0]}")
+        print(f"段内是否有预测为异常的时间点: {np.any(seg_pred)}")
 
-        detected_idxs = np.where(seg_pred == 1)[0]
+        # 修正 detected_idxs 的计算
+        detected_idxs = np.where(seg_pred)[0]
         print(f"段内检测到的异常时间点索引 (相对段内): {detected_idxs}")
 
         gt_dims = {d - 1 for d in gt_dims_raw if 1 <= d <= feature_dim}
@@ -203,8 +220,6 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
             FP = len(inferred_dims - gt_dims)
             FN = len(gt_dims - inferred_dims)
             TN = feature_dim - len(gt_dims.union(inferred_dims))
-            k = max(1, int(len(gt_dims) * topk_percent / 100))
-            k = min(k, feature_dim)
         else:
             k = max(1, int(len(gt_dims) * topk_percent / 100))
             k = min(k, feature_dim)
