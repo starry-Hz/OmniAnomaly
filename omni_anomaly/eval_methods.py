@@ -162,90 +162,80 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
     total_weight = 0  # IPS加权的权重
     feature_dim = feature_scores.shape[1]  # 维度数
 
-    # 遍历每个段
-    for (start, end, gt_dims_raw) in segments:
-        seg_true = y_true[start:end+1]  # 该段的真实标签（时间步级别）
-        seg_pred = y_pred[start:end+1]  # 该段的预测标签（时间步级别）
-        seg_scores = feature_scores[start:end+1]  # 该段的特征分数
-        
-        print(f"\n=== Debug Info ===")
-        print(f"Segment: start={start}, end={end}")
-        print(f"feature_dim: {feature_dim}")
-        print(f"Raw gt_dims (1-based): {sorted(gt_dims_raw)}")
+    print("\n=== 全局调试信息 ===")
+    print(f"y_true shape: {y_true.shape}, unique values: {np.unique(y_true)}")
+    print(f"y_pred shape: {y_pred.shape}, unique values: {np.unique(y_pred)}")
+    print(f"feature_scores shape: {feature_scores.shape}")
+    print(f"总段数: {len(segments)}\n")
 
-        # 修复：更严格的维度转换和验证
-        gt_dims = set()
-        for d in gt_dims_raw:
-            # 确保维度在合理范围内
-            if 1 <= d <= feature_dim:
-                gt_dims.add(d - 1)  # 转换为0-based
-            else:
-                print(f"Warning: 维度 {d} 超出范围 [1, {feature_dim}]，已忽略")
-        
-        print(f"gt_dims (0-based): {sorted(gt_dims)}")
-        print(f"gt_dims count: {len(gt_dims)}")
+    for i, (start, end, gt_dims_raw) in enumerate(segments):
+        print(f"\n=== 处理第 {i + 1}/{len(segments)} 段 ===")
+        print(f"段范围: start={start}, end={end}")
+        print(f"真实异常维度 (1-based): {sorted(gt_dims_raw)}")
 
-        # 找出段内被模型预测为异常的时间步索引（相对段内）
+        seg_true = y_true[start:end + 1]
+        seg_pred = y_pred[start:end + 1]
+        seg_scores = feature_scores[start:end + 1]
+
+        print(f"段内真实标签 (seg_true): {seg_true}")
+        print(f"段内预测标签 (seg_pred): {seg_pred}")
+        print(f"段内是否有预测为异常的时间点: {np.any(seg_pred == 1)}")
+
         detected_idxs = np.where(seg_pred == 1)[0]
-        
+        print(f"段内检测到的异常时间点索引 (相对段内): {detected_idxs}")
+
+        gt_dims = {d - 1 for d in gt_dims_raw if 1 <= d <= feature_dim}
+        print(f"真实异常维度 (0-based): {sorted(gt_dims)}")
+
         if len(detected_idxs) == 0:
-            ips = 0
-            TP = TN = FP = FN = 0
+            print("未检测到任何异常点，尝试从特征分数中推断异常维度")
             inferred_dims = set()
-            k = 0
-        else:
-            # 修改：基于真实异常维度数量计算k值
-            if len(gt_dims) > 0:
+            # 从整个段的特征分数中推断异常维度
+            for scores in seg_scores:
                 k = max(1, int(len(gt_dims) * topk_percent / 100))
-                # 确保k不超过总维度数
                 k = min(k, feature_dim)
-            else:
-                k = 1
-            
-            print(f"topk_percent: {topk_percent}%, gt_dims_count: {len(gt_dims)}, calculated k: {k}")
-            
-            inferred_dims = set()
-            for idx in detected_idxs:
-                scores = seg_scores[idx]
-                
-                # 获取top-k维度（分数最高的k个维度）
-                if len(scores) > 0 and k > 0:
-                    topk_dims = np.argsort(scores)[-k:]
-                    # 确保所有推断维度都在有效范围内
-                    topk_dims = [d for d in topk_dims if 0 <= d < feature_dim]
-                    inferred_dims.update(topk_dims)
-            
-            # 计算交集和各项指标
+                topk_dims = np.argsort(scores)[-k:]
+                inferred_dims.update(topk_dims)
+
             intersection = gt_dims & inferred_dims
             ips = len(intersection) / len(gt_dims) if len(gt_dims) > 0 else 0
-            
             TP = len(intersection)
             FP = len(inferred_dims - gt_dims)
             FN = len(gt_dims - inferred_dims)
-            
-            # 计算TN：总维度数减去所有涉及的维度数
-            union_dims = gt_dims.union(inferred_dims)
-            TN = feature_dim - len(union_dims)
-            TN = max(TN, 0)  # 确保TN不为负
+            TN = feature_dim - len(gt_dims.union(inferred_dims))
+            k = max(1, int(len(gt_dims) * topk_percent / 100))
+            k = min(k, feature_dim)
+        else:
+            k = max(1, int(len(gt_dims) * topk_percent / 100))
+            k = min(k, feature_dim)
+            print(f"计算的 top-k 维度数量: {k}")
 
-        # Debug信息
-        print(f"k (selected dimensions): {k}")
-        print(f"inferred_dims (0-based): {sorted(inferred_dims)}")
-        print(f"inferred_dims (1-based): {[d+1 for d in sorted(inferred_dims)]}")
-        print(f"intersection: {sorted(intersection) if 'intersection' in locals() else 'N/A'}")
-        print(f"TP: {TP}, FP: {FP}, FN: {FN}, TN: {TN}, IPS: {ips:.4f}")
-        print("===================")
+            inferred_dims = set()
+            for idx in detected_idxs:
+                scores = seg_scores[idx]
+                topk_dims = np.argsort(scores)[-k:]
+                inferred_dims.update(topk_dims)
+
+            intersection = gt_dims & inferred_dims
+            ips = len(intersection) / len(gt_dims) if len(gt_dims) > 0 else 0
+            TP = len(intersection)
+            FP = len(inferred_dims - gt_dims)
+            FN = len(gt_dims - inferred_dims)
+            TN = feature_dim - len(gt_dims.union(inferred_dims))
+
+        print(f"推断的异常维度 (0-based): {sorted(inferred_dims)}")
+        print(f"真实与推断的交集: {sorted(intersection) if 'intersection' in locals() else 'N/A'}")
+        print(f"段内指标: TP={TP}, FP={FP}, FN={FN}, TN={TN}, IPS={ips:.4f}")
 
         seg_len = end - start + 1
         weight = seg_len
-        
         total_TP += TP
         total_TN += TN
         total_FP += FP
         total_FN += FN
         total_ips += ips * weight
         total_weight += weight
-        
+
         results.append({
             'start': start,
             'end': end,
@@ -257,12 +247,12 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
             'k_selected': k,
             'gt_dims_count': len(gt_dims)
         })
-    
+
     avg_ips = total_ips / total_weight if total_weight > 0 else 0
     precision = total_TP / (total_TP + total_FP) if (total_TP + total_FP) > 0 else 0
     recall = total_TP / (total_TP + total_FN) if (total_TP + total_FN) > 0 else 0
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
-    
+
     summary = {
         'TP': total_TP,
         'TN': total_TN,
@@ -273,7 +263,11 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
         'recall': recall,
         'F1': f1
     }
-    
+
+    print("\n=== 汇总指标 ===")
+    print(f"总 TP: {total_TP}, 总 TN: {total_TN}, 总 FP: {total_FP}, 总 FN: {total_FN}")
+    print(f"平均 IPS: {avg_ips:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}")
+
     return results, summary
 
 
@@ -293,6 +287,10 @@ def pot_eval(init_score, score, label, q=1e-3, level=0.02, feature_scores=None, 
     Returns:
         dict: pot result dict, 包含 segment_results 和 segment_summary（如有）
     """
+    if len(init_score) == 0 or len(score) == 0:
+        print("警告：init_score 或 score 为空，无法运行 POT 方法。")
+        return {}
+
     s = SPOT(q)  # SPOT object
     s.fit(init_score, score)  # data import
     s.initialize(level=level, min_extrema=True)  # initialization step
