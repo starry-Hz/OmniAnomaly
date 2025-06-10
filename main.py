@@ -4,7 +4,7 @@ import os
 import pickle
 import sys
 import time
-import warnings
+
 from argparse import ArgumentParser
 from pprint import pformat, pprint
 
@@ -21,6 +21,13 @@ from omni_anomaly.training import Trainer
 from omni_anomaly.utils import get_data_dim, get_data, save_z
 from datetime import datetime
 
+
+from omni_anomaly.eval_methods import *
+
+
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 class ExpConfig(Config):
     # dataset configuration
     dataset = "machine-1-1"
@@ -73,11 +80,13 @@ class ExpConfig(Config):
     # SMD group 1: 0.0050
     # SMD group 2: 0.0075
     # SMD group 3: 0.0001
-    level = 0.01
+    # level = 0.01
+    # level = 0.001
+    level = 0.005
 
     # outputs config
     save_z = False  # whether to save sampled z in hidden space
-    get_score_on_dim = False  # whether to get score on dim. If `True`, the score will be a 2-dim ndarray
+    get_score_on_dim = True  # whether to get score on dim. If `True`, the score will be a 2-dim ndarray
     save_dir = 'model'
     restore_dir = None  # If not None, restore variables from this dir
     result_dir = 'result'  # Where to save the result file
@@ -155,6 +164,8 @@ def main():
                 # get score of test set
                 test_start = time.time()
                 test_score, test_z, pred_speed = predictor.get_score(x_test)
+                print('test_score shape: ', test_score.shape)   # test_score shape:  (28380, 38)
+                print('test_z shape: ', test_z.shape) # test_z shape:  (28380, 100, 6)
                 # test_time整个测试集的总预测时间,pred_speed每个预测样本的平均预测速度
                 test_time = time.time() - test_start
                 if config.save_z:
@@ -173,19 +184,43 @@ def main():
 
                 if y_test is not None and len(y_test) >= len(test_score):
                     if config.get_score_on_dim:
-                        # get the joint score
-                        test_score = np.sum(test_score, axis=-1)
-                        train_score = np.sum(train_score, axis=-1)
+                        test_score_joint = np.sum(test_score, axis=-1)  # 修正：将多维 score 转换为一维 joint score,即对 test_score 在最后一个维度求和
+                        train_score_joint = np.sum(train_score, axis=-1)
+                    else:
+                        test_score_joint = test_score
+                        train_score_joint = train_score
 
                     # get best f1
-                    t, th = bf_search(test_score, y_test[-len(test_score):],
-                                      start=config.bf_search_min,
-                                      end=config.bf_search_max,
-                                      step_num=int(abs(config.bf_search_max - config.bf_search_min) /
-                                                   config.bf_search_step_size),
-                                      display_freq=50)
+                    t, th = bf_search(
+                        test_score_joint,  # 修正：传入一维 joint score
+                        y_test[-len(test_score_joint):],  # 修正：标签长度与分数对齐
+                        start=config.bf_search_min,
+                        end=config.bf_search_max,
+                        step_num=int(abs(config.bf_search_max - config.bf_search_min) / config.bf_search_step_size),
+                        display_freq=50
+                    )
                     # get pot results
-                    pot_result = pot_eval(train_score, test_score, y_test[-len(test_score):], level=config.level)
+                    # pot_result = pot_eval(
+                    #     train_score_joint,  # 修正：传入一维 joint score
+                    #     test_score_joint,
+                    #     y_test[-len(test_score_joint):],
+                    #     level=config.level
+                    # )
+
+                    label_file = os.path.join('ServerMachineDataset/interpretation_label', config.dataset + '.txt')
+                    print('label_file:', label_file)
+                    pot_result = pot_eval(
+                        train_score_joint,
+                        test_score_joint,
+                        y_test[-len(test_score_joint):],
+                        level=config.level,
+                        feature_scores=test_score,
+                        label_file=label_file,
+                        topk_percent=100,
+                        # datasets=config.dataset
+                    )
+                    print('每段IPS与混淆:', pot_result['segment_results'])
+                    print('总和:', pot_result['segment_summary'])
 
                     # output the results
                     best_valid_metrics.update({
