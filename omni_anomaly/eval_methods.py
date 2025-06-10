@@ -131,9 +131,10 @@ def parse_interpretation_label_file(label_file):
     return segments
 
 
-def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=100):
+def compute_segment_ips(y_true, y_pred, feature_scores, interpretation_segments, topk_percent=100):
     """
-    计算分段（段级别）的IPS、TP、TN、FP、FN、Precision、Recall和F1指标。
+    计算基于 y_true 异常段的 IPS、TP、TN、FP、FN、Precision、Recall 和 F1 指标，
+    真实异常维度按照 interpretation_segments 的顺序依次匹配。
 
     参数:
     ----------
@@ -143,9 +144,9 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
         预测标签（shape: [时间步]）
     feature_scores : ndarray
         模型预测的每个时间步每个维度的分数（shape: [时间步, 维度数]）
-    segments : list of tuples
-        每个段信息 (start, end, gt_dims)，
-        其中 start 和 end 是该段的起止index（闭区间），gt_dims 是该段的真实异常维度（1-based索引的set）。
+    interpretation_segments : list of tuples
+        interpretation_label 文件中的段信息 (start, end, gt_dims)，
+        其中 start 和 end 是该段的起止索引（闭区间），gt_dims 是该段的真实异常维度（1-based索引的 set）。
     topk_percent : int
         基于真实异常维度数量的百分比（100表示与真实异常维度数相同，150表示1.5倍）。
 
@@ -180,13 +181,12 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
     print(f"y_true shape: {y_true.shape}, unique values: {np.unique(y_true)}")
     print(f"y_pred shape: {y_pred.shape}, unique values: {np.unique(y_pred)}")
     print(f"feature_scores shape: {feature_scores.shape}")
-    print(f"总段数: {len(segments)}")
     print(f"y_true 中的异常段: {anomaly_segments}\n")
 
-    for i, (start, end, gt_dims_raw) in enumerate(segments):
-        print(f"\n=== 处理第 {i + 1}/{len(segments)} 段 ===")
+    # 按顺序匹配 interpretation_segments 的异常维度
+    for i, (start, end) in enumerate(anomaly_segments):
+        print(f"\n=== 处理第 {i + 1}/{len(anomaly_segments)} 段 ===")
         print(f"段范围: start={start}, end={end}")
-        print(f"真实异常维度 (1-based): {sorted(gt_dims_raw)}")
 
         seg_true = y_true[start:end + 1]
         seg_pred = y_pred[start:end + 1]
@@ -197,17 +197,20 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
         print(f"段内真实异常时间点索引 (相对段内): {np.where(seg_true > 0)[0]}")
         print(f"段内是否有预测为异常的时间点: {np.any(seg_pred)}")
 
-        # 修正 detected_idxs 的计算
+        # 获取 interpretation_segments 中的异常维度
+        gt_dims = set()
+        if i < len(interpretation_segments):
+            _, _, dims = interpretation_segments[i]
+            gt_dims.update(dims)
+        gt_dims = {d - 1 for d in gt_dims if 1 <= d <= feature_dim}  # 转为 0-based 索引
+        print(f"真实异常维度 (0-based): {sorted(gt_dims)}")
+
         detected_idxs = np.where(seg_pred)[0]
         print(f"段内检测到的异常时间点索引 (相对段内): {detected_idxs}")
-
-        gt_dims = {d - 1 for d in gt_dims_raw if 1 <= d <= feature_dim}
-        print(f"真实异常维度 (0-based): {sorted(gt_dims)}")
 
         if len(detected_idxs) == 0:
             print("未检测到任何异常点，尝试从特征分数中推断异常维度")
             inferred_dims = set()
-            # 从整个段的特征分数中推断异常维度
             for scores in seg_scores:
                 k = max(1, int(len(gt_dims) * topk_percent / 100))
                 k = min(k, feature_dim)
@@ -223,7 +226,6 @@ def compute_segment_ips(y_true, y_pred, feature_scores, segments, topk_percent=1
         else:
             k = max(1, int(len(gt_dims) * topk_percent / 100))
             k = min(k, feature_dim)
-            print(f"计算的 top-k 维度数量: {k}")
 
             inferred_dims = set()
             for idx in detected_idxs:
@@ -336,7 +338,7 @@ def pot_eval(init_score, score, label, q=1e-3, level=0.02, feature_scores=None, 
             y_true=label,
             y_pred=pred,
             feature_scores=feature_scores,
-            segments=segments,
+            interpretation_segments=segments,
             topk_percent=topk_percent
         )
         result['segment_results'] = segment_results
