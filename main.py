@@ -82,7 +82,7 @@ class ExpConfig(Config):
     # SMD group 3: 0.0001
     # level = 0.01
     # level = 0.001
-    level = 0.005
+    level = 0.0075
 
     # outputs config
     save_z = False  # whether to save sampled z in hidden space

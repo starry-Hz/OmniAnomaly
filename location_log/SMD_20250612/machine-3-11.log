@@ -1,0 +1,390 @@
+2025-06-13 06:34:12.695338: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Configurations
+===========================================
+{'batch_size': 50,
+ 'bf_search_max': 400.0,
+ 'bf_search_min': -400.0,
+ 'bf_search_step_size': 1.0,
+ 'dataset': 'machine-3-11',
+ 'dense_dim': 500,
+ 'early_stop': True,
+ 'get_score_on_dim': True,
+ 'gradient_clip_norm': 10.0,
+ 'initial_lr': 0.001,
+ 'l2_reg': 0.0001,
+ 'level': 0.0001,
+ 'lr_anneal_epoch_freq': 40,
+ 'lr_anneal_factor': 0.5,
+ 'lr_anneal_step_freq': None,
+ 'max_epoch': 10,
+ 'max_test_size': None,
+ 'max_train_size': None,
+ 'nf_layers': 20,
+ 'posterior_flow_type': 'nf',
+ 'restore_dir': None,
+ 'result_dir': 'result',
+ 'rnn_cell': 'GRU',
+ 'rnn_num_hidden': 500,
+ 'save_dir': 'model',
+ 'save_z': False,
+ 'std_epsilon': 0.0001,
+ 'test_batch_size': 50,
+ 'test_n_z': 1,
+ 'test_score_filename': 'test_score.pkl',
+ 'test_start': 0,
+ 'train_score_filename': 'train_score.pkl',
+ 'train_start': 0,
+ 'use_connected_z_p': True,
+ 'use_connected_z_q': True,
+ 'valid_step_freq': 100,
+ 'window_length': 100,
+ 'x_dim': 38,
+ 'z_dim': 3}
+
+train start time:  2025-06-13 06:33:59
+load data of: machine-3-11
+train:  0 None
+test:  0 None
+Data normalized
+Data normalized
+train set shape:  (28695, 38)
+test set shape:  (28696, 38)
+test set label shape:  (28696,)
+Trainable Parameters                                            (2,607,740 in total)
+------------------------------------------------------------------------------------
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/gates/kernel             (538, 1000)  538,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/gates/bias               (1000,)        1,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/candidate/kernel         (538, 500)   269,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/candidate/bias           (500,)           500
+model/q_z_given_x/rnn_q_z/dense/kernel                          (500, 500)   250,000
+model/q_z_given_x/rnn_q_z/dense/bias                            (500,)           500
+model/q_z_given_x/rnn_q_z/dense_1/kernel                        (500, 500)   250,000
+model/q_z_given_x/rnn_q_z/dense_1/bias                          (500,)           500
+model/vae/variational/z_mean/kernel                             (503, 3)       1,509
+model/vae/variational/z_mean/bias                               (3,)               3
+model/vae/variational/z_std/kernel                              (503, 3)       1,509
+model/vae/variational/z_std/bias                                (3,)               3
+model/posterior_flow/_0/w                                       (1, 3)             3
+model/posterior_flow/_0/b                                       (1,)               1
+model/posterior_flow/_0/u                                       (1, 3)             3
+model/posterior_flow/_1/w                                       (1, 3)             3
+model/posterior_flow/_1/b                                       (1,)               1
+model/posterior_flow/_1/u                                       (1, 3)             3
+model/posterior_flow/_2/w                                       (1, 3)             3
+model/posterior_flow/_2/b                                       (1,)               1
+model/posterior_flow/_2/u                                       (1, 3)             3
+model/posterior_flow/_3/w                                       (1, 3)             3
+model/posterior_flow/_3/b                                       (1,)               1
+model/posterior_flow/_3/u                                       (1, 3)             3
+model/posterior_flow/_4/w                                       (1, 3)             3
+model/posterior_flow/_4/b                                       (1,)               1
+model/posterior_flow/_4/u                                       (1, 3)             3
+model/posterior_flow/_5/w                                       (1, 3)             3
+model/posterior_flow/_5/b                                       (1,)               1
+model/posterior_flow/_5/u                                       (1, 3)             3
+model/posterior_flow/_6/w                                       (1, 3)             3
+model/posterior_flow/_6/b                                       (1,)               1
+model/posterior_flow/_6/u                                       (1, 3)             3
+model/posterior_flow/_7/w                                       (1, 3)             3
+model/posterior_flow/_7/b                                       (1,)               1
+model/posterior_flow/_7/u                                       (1, 3)             3
+model/posterior_flow/_8/w                                       (1, 3)             3
+model/posterior_flow/_8/b                                       (1,)               1
+model/posterior_flow/_8/u                                       (1, 3)             3
+model/posterior_flow/_9/w                                       (1, 3)             3
+model/posterior_flow/_9/b                                       (1,)               1
+model/posterior_flow/_9/u                                       (1, 3)             3
+model/posterior_flow/_10/w                                      (1, 3)             3
+model/posterior_flow/_10/b                                      (1,)               1
+model/posterior_flow/_10/u                                      (1, 3)             3
+model/posterior_flow/_11/w                                      (1, 3)             3
+model/posterior_flow/_11/b                                      (1,)               1
+model/posterior_flow/_11/u                                      (1, 3)             3
+model/posterior_flow/_12/w                                      (1, 3)             3
+model/posterior_flow/_12/b                                      (1,)               1
+model/posterior_flow/_12/u                                      (1, 3)             3
+model/posterior_flow/_13/w                                      (1, 3)             3
+model/posterior_flow/_13/b                                      (1,)               1
+model/posterior_flow/_13/u                                      (1, 3)             3
+model/posterior_flow/_14/w                                      (1, 3)             3
+model/posterior_flow/_14/b                                      (1,)               1
+model/posterior_flow/_14/u                                      (1, 3)             3
+model/posterior_flow/_15/w                                      (1, 3)             3
+model/posterior_flow/_15/b                                      (1,)               1
+model/posterior_flow/_15/u                                      (1, 3)             3
+model/posterior_flow/_16/w                                      (1, 3)             3
+model/posterior_flow/_16/b                                      (1,)               1
+model/posterior_flow/_16/u                                      (1, 3)             3
+model/posterior_flow/_17/w                                      (1, 3)             3
+model/posterior_flow/_17/b                                      (1,)               1
+model/posterior_flow/_17/u                                      (1, 3)             3
+model/posterior_flow/_18/w                                      (1, 3)             3
+model/posterior_flow/_18/b                                      (1,)               1
+model/posterior_flow/_18/u                                      (1, 3)             3
+model/posterior_flow/_19/w                                      (1, 3)             3
+model/posterior_flow/_19/b                                      (1,)               1
+model/posterior_flow/_19/u                                      (1, 3)             3
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/gates/kernel      (503, 1000)  503,000
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/gates/bias        (1000,)        1,000
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/candidate/kernel  (503, 500)   251,500
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/candidate/bias    (500,)           500
+model/p_x_given_z/hidden/rnn_p_x/dense/kernel                   (500, 500)   250,000
+model/p_x_given_z/hidden/rnn_p_x/dense/bias                     (500,)           500
+model/p_x_given_z/hidden/rnn_p_x/dense_1/kernel                 (500, 500)   250,000
+model/p_x_given_z/hidden/rnn_p_x/dense_1/bias                   (500,)           500
+model/p_x_given_z/x_mean/kernel                                 (500, 38)     19,000
+model/p_x_given_z/x_mean/bias                                   (38,)             38
+model/p_x_given_z/x_std/kernel                                  (500, 38)     19,000
+model/p_x_given_z/x_std/bias                                    (38,)             38/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tfsnippet/utils/tfver.py:22: DeprecationWarning: Function 'semver.compare' is deprecated. Deprecated since version 2.10.0.  This function will be removed in semver 3. Use the respective 'semver.VersionInfo.compare' instead.
+  compare_result = semver.compare(version, tf.__version__)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tfsnippet/utils/tfver.py:22: DeprecationWarning: Function 'semver.compare' is deprecated. Deprecated since version 2.10.0.  This function will be removed in semver 3. Use the respective 'semver.VersionInfo.compare' instead.
+  compare_result = semver.compare(version, tf.__version__)
+INFO:tensorflow:Restoring parameters from /tmp/tmpc5ogfas7/variables.dat-3300
+2025-06-13 07:50:03,204 [INFO] tensorflow: Restoring parameters from /tmp/tmpc5ogfas7/variables.dat-3300
+
+
+train_values: (20087, 38)
+[Epoch 1/10, Step 100] step time: 1.331s (±6.018s); train time: 1m 13.53s; valid time: 59.6s; loss: 2598.94 (±24054.3); valid loss: -29.0906 (*)
+[Epoch 1/10, Step 200] step time: 1.161s (±5.641s); train time: 59.44s; valid time: 56.7s; loss: -36.5258 (±11.236); valid loss: -37.9881 (*)
+[Epoch 1/10, Step 300] step time: 1.148s (±5.53s); train time: 59.27s; valid time: 55.57s; loss: -44.1183 (±4.8465); valid loss: -31.739
+train_values: (20087, 38)
+[Epoch 2/10, Step 400, ETA 1h 11m 54.55s] step time: 1.165s (±5.676s); train time: 0.6327s; valid time: 57.03s; loss: -45.9987 (±5.4482); valid loss: -40.0757 (*)
+[Epoch 2/10, Step 500, ETA 1h 9m 25.73s] step time: 1.16s (±5.659s); train time: 59.22s; valid time: 56.86s; loss: -49.3613 (±3.83371); valid loss: -49.4693 (*)
+[Epoch 2/10, Step 600, ETA 1h 6m 59.7s] step time: 1.146s (±5.528s); train time: 59.08s; valid time: 55.56s; loss: -47.6083 (±7.57047); valid loss: -47.3142
+[Epoch 2/10, Step 700, ETA 1h 4m 43.5s] step time: 1.148s (±5.516s); train time: 59.37s; valid time: 55.45s; loss: -50.1959 (±5.43148); valid loss: -46.5713
+train_values: (20087, 38)
+[Epoch 3/10, Step 800, ETA 1h 2m 32.25s] step time: 1.147s (±5.529s); train time: 1.206s; valid time: 55.57s; loss: -49.8964 (±4.80368); valid loss: -47.4414
+[Epoch 3/10, Step 900, ETA 1h 25.43s] step time: 1.149s (±5.556s); train time: 59.11s; valid time: 55.84s; loss: -52.4507 (±4.40411); valid loss: -37.2584
+[Epoch 3/10, Step 1000, ETA 58m 20.75s] step time: 1.148s (±5.512s); train time: 59.49s; valid time: 55.37s; loss: -53.2899 (±5.19862); valid loss: -45.9098
+[Epoch 3/10, Step 1100, ETA 56m 20.14s] step time: 1.157s (±5.641s); train time: 59.04s; valid time: 56.7s; loss: -53.8068 (±5.54164); valid loss: -55.5395 (*)
+train_values: (20087, 38)
+[Epoch 4/10, Step 1200, ETA 54m 17.45s] step time: 1.144s (±5.519s); train time: 1.785s; valid time: 55.47s; loss: -54.2462 (±6.6195); valid loss: -48.6757
+[Epoch 4/10, Step 1300, ETA 52m 16.39s] step time: 1.146s (±5.527s); train time: 59.12s; valid time: 55.56s; loss: -53.7172 (±4.69442); valid loss: -49.9856
+[Epoch 4/10, Step 1400, ETA 50m 16.42s] step time: 1.147s (±5.517s); train time: 59.34s; valid time: 55.43s; loss: -54.8212 (±5.66284); valid loss: -49.6125
+[Epoch 4/10, Step 1500, ETA 48m 16.48s] step time: 1.143s (±5.545s); train time: 58.69s; valid time: 55.68s; loss: -56.1043 (±5.34797); valid loss: -52.3893
+train_values: (20087, 38)
+[Epoch 5/10, Step 1600, ETA 46m 17.23s] step time: 1.143s (±5.515s); train time: 2.435s; valid time: 55.4s; loss: -55.5202 (±8.09566); valid loss: -53.8408
+[Epoch 5/10, Step 1700, ETA 44m 18.9s] step time: 1.146s (±5.524s); train time: 59.11s; valid time: 55.51s; loss: -53.1779 (±6.0695); valid loss: -54.9137
+[Epoch 5/10, Step 1800, ETA 42m 20.62s] step time: 1.143s (±5.516s); train time: 58.89s; valid time: 55.44s; loss: -56.7209 (±5.15659); valid loss: -55.2523
+[Epoch 5/10, Step 1900, ETA 40m 23.99s] step time: 1.154s (±5.632s); train time: 58.83s; valid time: 56.61s; loss: -58.1971 (±4.38098); valid loss: -55.8684 (*)
+train_values: (20087, 38)
+[Epoch 6/10, Step 2000, ETA 38m 26.44s] step time: 1.143s (±5.521s); train time: 3.001s; valid time: 55.49s; loss: -58.699 (±5.79587); valid loss: -49.0898
+[Epoch 6/10, Step 2100, ETA 36m 30.07s] step time: 1.153s (±5.643s); train time: 58.69s; valid time: 56.7s; loss: -58.7256 (±6.85049); valid loss: -57.0943 (*)
+[Epoch 6/10, Step 2200, ETA 34m 32.75s] step time: 1.141s (±5.498s); train time: 58.85s; valid time: 55.25s; loss: -59.4303 (±5.80803); valid loss: -49.6241
+[Epoch 6/10, Step 2300, ETA 32m 36.73s] step time: 1.154s (±5.628s); train time: 58.92s; valid time: 56.57s; loss: -59.9284 (±5.2641); valid loss: -61.3824 (*)
+train_values: (20087, 38)
+[Epoch 7/10, Step 2400, ETA 30m 40.06s] step time: 1.144s (±5.526s); train time: 3.521s; valid time: 55.55s; loss: -62.8961 (±3.9018); valid loss: -60.5653
+[Epoch 7/10, Step 2500, ETA 28m 43.47s] step time: 1.142s (±5.519s); train time: 58.81s; valid time: 55.46s; loss: -60.9262 (±5.00272); valid loss: -53.8449
+[Epoch 7/10, Step 2600, ETA 26m 47.74s] step time: 1.155s (±5.624s); train time: 59.01s; valid time: 56.53s; loss: -60.8303 (±6.24191); valid loss: -61.5807 (*)
+[Epoch 7/10, Step 2700, ETA 24m 51.48s] step time: 1.144s (±5.519s); train time: 58.96s; valid time: 55.46s; loss: -61.7058 (±8.90658); valid loss: -59.7457
+train_values: (20087, 38)
+[Epoch 8/10, Step 2800, ETA 22m 55.29s] step time: 1.142s (±5.514s); train time: 4.139s; valid time: 55.41s; loss: -65.4171 (±5.48481); valid loss: -56.7852
+[Epoch 8/10, Step 2900, ETA 20m 59.13s] step time: 1.14s (±5.49s); train time: 58.83s; valid time: 55.18s; loss: -66.0794 (±5.68998); valid loss: -61.5639
+[Epoch 8/10, Step 3000, ETA 19m 3.147s] step time: 1.141s (±5.507s); train time: 58.74s; valid time: 55.36s; loss: -64.1161 (±7.05669); valid loss: -58.2311
+[Epoch 8/10, Step 3100, ETA 17m 7.753s] step time: 1.157s (±5.644s); train time: 59.02s; valid time: 56.71s; loss: -67.5591 (±3.96386); valid loss: -63.4738 (*)
+train_values: (20087, 38)
+[Epoch 9/10, Step 3200, ETA 15m 11.98s] step time: 1.142s (±5.512s); train time: 4.778s; valid time: 55.37s; loss: -65.8253 (±5.92772); valid loss: -61.4655
+[Epoch 9/10, Step 3300, ETA 13m 16.52s] step time: 1.153s (±5.624s); train time: 58.82s; valid time: 56.52s; loss: -65.1907 (±4.93485); valid loss: -67.2119 (*)
+[Epoch 9/10, Step 3400, ETA 11m 20.87s] step time: 1.142s (±5.513s); train time: 58.81s; valid time: 55.4s; loss: -66.4823 (±6.1871); valid loss: -62.0579
+[Epoch 9/10, Step 3500, ETA 9m 25.3s] step time: 1.142s (±5.517s); train time: 58.77s; valid time: 55.45s; loss: -68.3799 (±6.28672); valid loss: -61.3592
+train_values: (20087, 38)
+[Epoch 10/10, Step 3600, ETA 7m 29.82s] step time: 1.142s (±5.518s); train time: 5.271s; valid time: 55.45s; loss: -68.3013 (±4.64971); valid loss: -67.0038
+[Epoch 10/10, Step 3700, ETA 5m 34.39s] step time: 1.141s (±5.503s); train time: 58.85s; valid time: 55.32s; loss: -68.3186 (±4.66517); valid loss: -56.5974
+[Epoch 10/10, Step 3800, ETA 3m 39.04s] step time: 1.144s (±5.513s); train time: 59.02s; valid time: 55.41s; loss: -69.9102 (±4.38149); valid loss: -63.6789
+[Epoch 10/10, Step 3900, ETA 1m 43.74s] step time: 1.145s (±5.526s); train time: 59.02s; valid time: 55.52s; loss: -69.8989 (±5.75274); valid loss: -66.5585
+train end time:  2025-06-13 07:50:03
+train time:  4564.330422878265
+test start time:  2025-06-13 07:50:03
+------------------------------ testing ------------------------------
+test_score shape:  (28597, 38)
+test_z shape:  (28597, 100, 6)
+search range:  -400.0 400.0
+cur thr:  -399.0 [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -349.0 [0.20624814806339967, 0.11498257772948561, 0.9999999494949521, 198.0, 26875.0, 1524.0, 0.0, 11.666277790740308] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -299.0 [0.12305664425979192, 0.06556291369018902, 0.9999999494949521, 198.0, 25577.0, 2822.0, 0.0, 10.666311122962567] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -249.0 [0.049314587384187335, 0.025280898844125512, 0.9999999494949521, 198.0, 20765.0, 7634.0, 0.0, 5.333155561481283] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -199.0 [0.019254890488116676, 0.009721131181401645, 0.9999999494949521, 198.0, 8229.0, 20170.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -149.0 [0.013811728475118298, 0.006953956377285865, 0.9999999494949521, 198.0, 124.0, 28275.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -99.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0]  0%|          | 0/28597 [00:00<?, ?it/s]100%|██████████| 28597/28597 [00:00<00:00, 1644810.44it/s] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  -49.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  1.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  51.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  101.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  151.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  201.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  251.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  301.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+cur thr:  351.0 [0.013752250980848828, 0.0069238031937182915, 0.9999999494949521, 198.0, 0.0, 28399.0, 0.0, 0.0] [0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+[0.35967006810688795, 0.219269100561804, 0.9999999494949521, 198.0, 27694.0, 705.0, 0.0, 21.665944468517715] -399.0
+label_file: ServerMachineDataset/interpretation_label/machine-3-11.txt
+Initial threshold : 3753.5242
+Number of peaks : 2
+Grimshaw maximum log-likelihood estimation ... [done]
+	γ = 0
+	σ = 5109.699
+	L = 19.077791640327973
+Extreme quantile (probability = 0.001): -9838.887216090643
+18
+28597
+POT result:  (0.9777727319871361, 0.9565216929216573, 0.9999999494949521, 198.0, 28390.0, 9.0, 0.0) -2067.6031577112794 25.999133362221258
+
+=== 全局调试信息 ===
+y_true shape: (28597,), unique values: [0. 1.]
+y_pred shape: (28597,), unique values: [False  True]
+feature_scores shape: (28597, 38)
+y_true 中的异常段: [(21131, 21196), (27726, 27851), (27896, 27901)]
+
+
+=== 处理第 1/3 段 ===
+段范围: start=21131, end=21196
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True]
+段内真实异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 1, 2, 3, 4, 5, 6, 9, 10, 15, 18, 19, 20, 21, 22, 23, 25, 27, 29, 30, 31, 34, 35]
+段内检测到的异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65]
+推断的异常维度 (0-based): [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37]
+真实与推断的交集: [0, 1, 2, 3, 5, 6, 9, 10, 15, 18, 19, 20, 21, 22, 23, 25, 27, 29, 30, 31, 34, 35]
+段内指标: TP=22, FP=15, FN=1, TN=0, IPS=0.9565
+
+=== 处理第 2/3 段 ===
+段范围: start=27726, end=27851
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True]
+段内真实异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 1, 2, 3, 6, 18, 19, 20, 21, 22, 23, 25, 27, 29, 30, 31, 33, 34, 35, 36]
+段内检测到的异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125]
+推断的异常维度 (0-based): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37]
+真实与推断的交集: [0, 1, 2, 3, 6, 18, 19, 20, 21, 22, 23, 25, 27, 30, 31, 33, 34, 35, 36]
+段内指标: TP=19, FP=18, FN=1, TN=0, IPS=0.9500
+
+=== 处理第 3/3 段 ===
+段范围: start=27896, end=27901
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True]
+段内真实异常时间点索引 (相对段内): [0 1 2 3 4 5]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [9, 10]
+段内检测到的异常时间点索引 (相对段内): [0 1 2 3 4 5]
+推断的异常维度 (0-based): [24, 28]
+真实与推断的交集: []
+段内指标: TP=0, FP=2, FN=2, TN=34, IPS=0.0000
+
+=== 汇总指标 ===
+总 TP: 41, 总 TN: 34, 总 FP: 35, 总 FN: 4
+平均 IPS: 0.9234, Precision: 0.5395, Recall: 0.9111, F1: 0.6777
+
+每段IPS与混淆: [{'start': 21131, 'end': 21196, 'TP': 22, 'TN': 0, 'FP': 15, 'FN': 1, 'IPS': 0.9565217391304348, 'k_selected': 23, 'gt_dims_count': 23}, {'start': 27726, 'end': 27851, 'TP': 19, 'TN': 0, 'FP': 18, 'FN': 1, 'IPS': 0.95, 'k_selected': 20, 'gt_dims_count': 20}, {'start': 27896, 'end': 27901, 'TP': 0, 'TN': 34, 'FP': 2, 'FN': 2, 'IPS': 0.0, 'k_selected': 2, 'gt_dims_count': 2}]
+总和: {'TP': 41, 'TN': 34, 'FP': 35, 'FN': 4, 'IPS': 0.9233860342555994, 'precision': 0.5394736842105263, 'recall': 0.9111111111111111, 'F1': 0.6776859504132231}
+test end time:  2025-06-13 07:56:24
+test time:  380.6146399974823
+==============================result==============================
+{'FN': 0.0,
+ 'FP': 705.0,
+ 'TN': 27694.0,
+ 'TP': 198.0,
+ 'best-f1': 0.35967006810688795,
+ 'best_valid_loss': -67.21191177251603,
+ 'latency': 21.665944468517715,
+ 'pot-FN': 0.0,
+ 'pot-FP': 9.0,
+ 'pot-TN': 28390.0,
+ 'pot-TP': 198.0,
+ 'pot-f1': 0.9777727319871361,
+ 'pot-latency': 25.999133362221258,
+ 'pot-precision': 0.9565216929216573,
+ 'pot-recall': 0.9999999494949521,
+ 'pot-threshold': -2067.6031577112794,
+ 'precision': 0.219269100561804,
+ 'pred_time': 0.32380304678336724,
+ 'pred_total_time': 185.50193738937378,
+ 'recall': 0.9999999494949521,
+ 'segment_results': [{'FN': 1,
+                      'FP': 15,
+                      'IPS': 0.9565217391304348,
+                      'TN': 0,
+                      'TP': 22,
+                      'end': 21196,
+                      'gt_dims_count': 23,
+                      'k_selected': 23,
+                      'start': 21131},
+                     {'FN': 1,
+                      'FP': 18,
+                      'IPS': 0.95,
+                      'TN': 0,
+                      'TP': 19,
+                      'end': 27851,
+                      'gt_dims_count': 20,
+                      'k_selected': 20,
+                      'start': 27726},
+                     {'FN': 2,
+                      'FP': 2,
+                      'IPS': 0.0,
+                      'TN': 34,
+                      'TP': 0,
+                      'end': 27901,
+                      'gt_dims_count': 2,
+                      'k_selected': 2,
+                      'start': 27896}],
+ 'segment_summary': {'F1': 0.6776859504132231,
+                     'FN': 4,
+                     'FP': 35,
+                     'IPS': 0.9233860342555994,
+                     'TN': 34,
+                     'TP': 41,
+                     'precision': 0.5394736842105263,
+                     'recall': 0.9111111111111111},
+ 'threshold': -399.0,
+ 'train_time': 455.0725596666336,
+ 'valid_time': 0.3242957888022769}
