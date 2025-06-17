@@ -209,9 +209,12 @@ def compute_segment_ips(y_true, y_pred, feature_scores, interpretation_segments,
         print(f"段内检测到的异常时间点索引 (相对段内): {detected_idxs}")
 
         if len(detected_idxs) == 0:
-            print("未检测到任何异常点，尝试从特征分数中推断异常维度")
+            print("未检测到任何异常点，将整个段中的时间索引标记为异常")
+            detected_idxs = np.arange(len(seg_scores))  # 将整个段的时间索引标记为异常
+
             inferred_dims = set()
-            for scores in seg_scores:
+            for idx in detected_idxs:
+                scores = seg_scores[idx]
                 k = max(1, int(len(gt_dims) * topk_percent / 100))
                 k = min(k, feature_dim)
                 topk_dims = np.argsort(scores)[-k:]
