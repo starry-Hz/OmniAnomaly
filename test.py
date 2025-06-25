@@ -1,95 +1,79 @@
 import subprocess
 import os
 import datetime
-import threading
-from queue import Queue
 
 # 定义文件列表
-file_list = [
+file_list_machine = [
     'machine-1-1.txt', 'machine-1-6.txt', 'machine-1-7.txt',
     'machine-2-1.txt', 'machine-2-2.txt', 'machine-2-3.txt',
     'machine-2-4.txt', 'machine-2-7.txt', 'machine-2-8.txt',
     'machine-3-3.txt', 'machine-3-4.txt', 'machine-3-6.txt',
     'machine-3-8.txt', 'machine-3-10.txt', 'machine-3-11.txt'
 ]
-# file_list = [f"omi-{i}.txt" for i in range(1, 2)]
-
+file_omi_list = [f"omi-{i}.txt" for i in range(1, 13)]
+file_list = file_omi_list + file_list_machine
+percentage_Dimension = [20, 30, 40, 50]
 current_date = datetime.datetime.now().strftime("%Y%m%d")
 
-# 创建线程安全的队列和失败任务列表
-task_queue = Queue()
+# 失败任务列表
 failed_tasks = []
-lock = threading.Lock()
 
-# 将任务放入队列
-for file in file_list:
-    task_queue.put(file)
+def run_single_task(file, percentage):
+    dataset_name = file[:-4]  # 去掉.txt后缀
+    # 获取文件名的前缀部分（兼容omi和machine两种格式）
+    file_name = file.split('-')[0] if '-' in file else file.split('_')[0]
+    log_dir = f"location_log/{file_name}_{current_date}/p{percentage}"
+    log_file = f"{log_dir}/{dataset_name}.log"  # 简化日志文件名
+    
+    print(f"\n➡️ 正在执行: {dataset_name} (percentage={percentage})")
+    print(f"日志文件将保存到: {log_file}")
 
-# 工作线程函数
-def worker(thread_id):
-    while not task_queue.empty():
-        try:
-            file = task_queue.get_nowait()
-        except:
-            break  # 队列已空
-            
-        dataset_name = file[:-4]  # 去掉.txt后缀
-        log_file = f"location_log/SMD_{current_date}/{dataset_name}.log"
+    command = [
+        'python', 'main.py',
+        f'--dataset={dataset_name}',
+        '--max_epoch=10',
+        f'--percentage_Dimension={percentage}',
+    ]
+    
+    try:
+        # 确保日志目录存在
+        os.makedirs(log_dir, exist_ok=True)
         
-        print(f"线程{thread_id} ➡️ 正在执行: {dataset_name}")
+        with open(log_file, 'w') as f:
+            process = subprocess.Popen(command, stdout=f, stderr=subprocess.STDOUT)
+            exit_code = process.wait()  # 等待进程结束
 
-        command = [
-            'python', 'main.py',
-            f'--dataset={dataset_name}',
-            '--max_epoch=10'
-        ]
-        
-        try:
-            with open(log_file, 'w') as f:
-                process = subprocess.Popen(command, stdout=f, stderr=subprocess.STDOUT)
-                exit_code = process.wait()  # 等待进程结束
+        if exit_code != 0:
+            print(f"⚠️ {dataset_name} (p={percentage}) 执行失败（退出码: {exit_code}）")
+            failed_tasks.append((dataset_name, percentage, log_file))
+        else:
+            print(f"✅ {dataset_name} (p={percentage}) 执行完成")
 
-            if exit_code != 0:
-                print(f"线程{thread_id} ⚠️  {dataset_name} 执行失败（退出码: {exit_code}），请查看日志：{log_file}")
-                with lock:
-                    failed_tasks.append(dataset_name)
-            else:
-                print(f"线程{thread_id} ✅  {dataset_name} 执行完成，日志保存在：{log_file}")
+    except Exception as e:
+        print(f"❌ {dataset_name} (p={percentage}) 执行过程中发生异常：{str(e)}")
+        failed_tasks.append((dataset_name, percentage, log_file))
 
-        except Exception as e:
-            print(f"线程{thread_id} ❌  {dataset_name} 执行过程中发生异常：{e}")
-            with lock:
-                failed_tasks.append(dataset_name)
-        
-        task_queue.task_done()
+if __name__ == "__main__":
+    print(f"📅 开始执行任务，当前日期: {current_date}")
+    print(f"📂 待处理文件数量: {len(file_list)}")
+    print(f"🔢 待测试的percentage_Dimension值: {percentage_Dimension}")
+    
+    # 主循环：先按percentage循环，再按文件循环
+    for percentage in percentage_Dimension:
+        print(f"\n🔄 开始处理 percentage_Dimension={percentage} 的任务...")
+        for file in file_list:
+            run_single_task(file, percentage)
+        print(f"✅ 已完成 percentage_Dimension={percentage} 的所有任务")
 
-# 如果日志目录不存在则创建
-os.makedirs(f"location_log/SMD_{current_date}", exist_ok=True)
+    print("\n" + "="*50)
+    print("🔚 所有数据集已处理完毕。统计结果:")
 
-# 创建并启动两个工作线程
-threads = []
-for i in range(1):
-    t = threading.Thread(target=worker, args=(i+1,))
-    t.start()
-    threads.append(t)
+    if failed_tasks:
+        print("\n以下任务执行失败，请检查对应日志：")
+        for task in failed_tasks:
+            print(f" - 数据集: {task[0]}, percentage: {task[1]}, 日志路径: {task[2]}")
+        print(f"\n❌ 失败任务数量: {len(failed_tasks)}/{len(file_list)*len(percentage_Dimension)}")
+    else:
+        print("\n🎉 所有任务均执行成功！")
 
-# 等待所有任务完成
-task_queue.join()
-
-# 等待所有线程完成
-for t in threads:
-    t.join()
-
-print("\n🔚 所有数据集已处理完毕。")
-
-if failed_tasks:
-    print("以下任务执行失败，请检查日志：")
-    for task in failed_tasks:
-        print(f" - {task}")
-else:
-    print("🎉 所有任务均执行成功！")
-
-# file_list = [f"omi-{i}.txt" for i in range(1, 13)]
-# print(file_list)
-# ['omi-1.txt', 'omi-2.txt', 'omi-3.txt', 'omi-4.txt', 'omi-5.txt', 'omi-6.txt', 'omi-7.txt', 'omi-8.txt', 'omi-9.txt', 'omi-10.txt', 'omi-11.txt', 'omi-12.txt']
-# (py36) hz@gpu-sys:~/code/OmniAnomaly$ nohup python test.py > location_log/SMD_20250610/SMD.log 2>&1 &
+    print("\n执行结束。")

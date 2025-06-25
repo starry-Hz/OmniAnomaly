@@ -92,7 +92,7 @@ class ExpConfig(Config):
     result_dir = 'result'  # Where to save the result file
     train_score_filename = 'train_score.pkl'
     test_score_filename = 'test_score.pkl'
-
+    percentage_Dimension = 20  # 异常定位维度数量百分比
 
 def main():
     logging.basicConfig(
@@ -218,6 +218,7 @@ def main():
                         label_file=label_file,
                         topk_percent=100,
                         # datasets=config.dataset
+                        percentage_Dimension=config.percentage_Dimension
                     )
                     print('每段IPS与混淆:', pot_result['segment_results'])
                     print('总和:', pot_result['segment_summary'])
@@ -232,7 +233,8 @@ def main():
                         'FP': t[5],
                         'FN': t[6],
                         'latency': t[-1],
-                        'threshold': th
+                        'threshold': th,
+                        'dataset': config.dataset,
                     })
                     best_valid_metrics.update(pot_result)
                 results.update_metrics(best_valid_metrics)
