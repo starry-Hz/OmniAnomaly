@@ -1,0 +1,821 @@
+2025-06-23 15:19:15.559695: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Configurations
+===========================================
+{'batch_size': 50,
+ 'bf_search_max': 400.0,
+ 'bf_search_min': -400.0,
+ 'bf_search_step_size': 1.0,
+ 'dataset': 'machine-3-6',
+ 'dense_dim': 500,
+ 'early_stop': True,
+ 'get_score_on_dim': True,
+ 'gradient_clip_norm': 10.0,
+ 'initial_lr': 0.001,
+ 'l2_reg': 0.0001,
+ 'level': 0.0075,
+ 'lr_anneal_epoch_freq': 40,
+ 'lr_anneal_factor': 0.5,
+ 'lr_anneal_step_freq': None,
+ 'max_epoch': 10,
+ 'max_test_size': None,
+ 'max_train_size': None,
+ 'nf_layers': 20,
+ 'percentage_Dimension': 40.0,
+ 'posterior_flow_type': 'nf',
+ 'restore_dir': None,
+ 'result_dir': 'result',
+ 'rnn_cell': 'GRU',
+ 'rnn_num_hidden': 500,
+ 'save_dir': 'model',
+ 'save_z': False,
+ 'std_epsilon': 0.0001,
+ 'test_batch_size': 50,
+ 'test_n_z': 1,
+ 'test_score_filename': 'test_score.pkl',
+ 'test_start': 0,
+ 'train_score_filename': 'train_score.pkl',
+ 'train_start': 0,
+ 'use_connected_z_p': True,
+ 'use_connected_z_q': True,
+ 'valid_step_freq': 100,
+ 'window_length': 100,
+ 'x_dim': 38,
+ 'z_dim': 3}
+
+train start time:  2025-06-23 15:18:48
+load data of: machine-3-6
+train:  0 None
+test:  0 None
+Data normalized
+Data normalized
+train set shape:  (28726, 38)
+test set shape:  (28726, 38)
+test set label shape:  (28726,)
+Trainable Parameters                                            (2,607,740 in total)
+------------------------------------------------------------------------------------
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/gates/kernel             (538, 1000)  538,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/gates/bias               (1000,)        1,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/candidate/kernel         (538, 500)   269,000
+model/q_z_given_x/rnn_q_z/rnn/gru_cell/candidate/bias           (500,)           500
+model/q_z_given_x/rnn_q_z/dense/kernel                          (500, 500)   250,000
+model/q_z_given_x/rnn_q_z/dense/bias                            (500,)           500
+model/q_z_given_x/rnn_q_z/dense_1/kernel                        (500, 500)   250,000
+model/q_z_given_x/rnn_q_z/dense_1/bias                          (500,)           500
+model/vae/variational/z_mean/kernel                             (503, 3)       1,509
+model/vae/variational/z_mean/bias                               (3,)               3
+model/vae/variational/z_std/kernel                              (503, 3)       1,509
+model/vae/variational/z_std/bias                                (3,)               3
+model/posterior_flow/_0/w                                       (1, 3)             3
+model/posterior_flow/_0/b                                       (1,)               1
+model/posterior_flow/_0/u                                       (1, 3)             3
+model/posterior_flow/_1/w                                       (1, 3)             3
+model/posterior_flow/_1/b                                       (1,)               1
+model/posterior_flow/_1/u                                       (1, 3)             3
+model/posterior_flow/_2/w                                       (1, 3)             3
+model/posterior_flow/_2/b                                       (1,)               1
+model/posterior_flow/_2/u                                       (1, 3)             3
+model/posterior_flow/_3/w                                       (1, 3)             3
+model/posterior_flow/_3/b                                       (1,)               1
+model/posterior_flow/_3/u                                       (1, 3)             3
+model/posterior_flow/_4/w                                       (1, 3)             3
+model/posterior_flow/_4/b                                       (1,)               1
+model/posterior_flow/_4/u                                       (1, 3)             3
+model/posterior_flow/_5/w                                       (1, 3)             3
+model/posterior_flow/_5/b                                       (1,)               1
+model/posterior_flow/_5/u                                       (1, 3)             3
+model/posterior_flow/_6/w                                       (1, 3)             3
+model/posterior_flow/_6/b                                       (1,)               1
+model/posterior_flow/_6/u                                       (1, 3)             3
+model/posterior_flow/_7/w                                       (1, 3)             3
+model/posterior_flow/_7/b                                       (1,)               1
+model/posterior_flow/_7/u                                       (1, 3)             3
+model/posterior_flow/_8/w                                       (1, 3)             3
+model/posterior_flow/_8/b                                       (1,)               1
+model/posterior_flow/_8/u                                       (1, 3)             3
+model/posterior_flow/_9/w                                       (1, 3)             3
+model/posterior_flow/_9/b                                       (1,)               1
+model/posterior_flow/_9/u                                       (1, 3)             3
+model/posterior_flow/_10/w                                      (1, 3)             3
+model/posterior_flow/_10/b                                      (1,)               1
+model/posterior_flow/_10/u                                      (1, 3)             3
+model/posterior_flow/_11/w                                      (1, 3)             3
+model/posterior_flow/_11/b                                      (1,)               1
+model/posterior_flow/_11/u                                      (1, 3)             3
+model/posterior_flow/_12/w                                      (1, 3)             3
+model/posterior_flow/_12/b                                      (1,)               1
+model/posterior_flow/_12/u                                      (1, 3)             3
+model/posterior_flow/_13/w                                      (1, 3)             3
+model/posterior_flow/_13/b                                      (1,)               1
+model/posterior_flow/_13/u                                      (1, 3)             3
+model/posterior_flow/_14/w                                      (1, 3)             3
+model/posterior_flow/_14/b                                      (1,)               1
+model/posterior_flow/_14/u                                      (1, 3)             3
+model/posterior_flow/_15/w                                      (1, 3)             3
+model/posterior_flow/_15/b                                      (1,)               1
+model/posterior_flow/_15/u                                      (1, 3)             3
+model/posterior_flow/_16/w                                      (1, 3)             3
+model/posterior_flow/_16/b                                      (1,)               1
+model/posterior_flow/_16/u                                      (1, 3)             3
+model/posterior_flow/_17/w                                      (1, 3)             3
+model/posterior_flow/_17/b                                      (1,)               1
+model/posterior_flow/_17/u                                      (1, 3)             3
+model/posterior_flow/_18/w                                      (1, 3)             3
+model/posterior_flow/_18/b                                      (1,)               1
+model/posterior_flow/_18/u                                      (1, 3)             3
+model/posterior_flow/_19/w                                      (1, 3)             3
+model/posterior_flow/_19/b                                      (1,)               1
+model/posterior_flow/_19/u                                      (1, 3)             3
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/gates/kernel      (503, 1000)  503,000
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/gates/bias        (1000,)        1,000
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/candidate/kernel  (503, 500)   251,500
+model/p_x_given_z/hidden/rnn_p_x/rnn/gru_cell/candidate/bias    (500,)           500
+model/p_x_given_z/hidden/rnn_p_x/dense/kernel                   (500, 500)   250,000
+model/p_x_given_z/hidden/rnn_p_x/dense/bias                     (500,)           500
+model/p_x_given_z/hidden/rnn_p_x/dense_1/kernel                 (500, 500)   250,000
+model/p_x_given_z/hidden/rnn_p_x/dense_1/bias                   (500,)           500
+model/p_x_given_z/x_mean/kernel                                 (500, 38)     19,000
+model/p_x_given_z/x_mean/bias                                   (38,)             38
+model/p_x_given_z/x_std/kernel                                  (500, 38)     19,000
+model/p_x_given_z/x_std/bias                                    (38,)             38/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tfsnippet/utils/tfver.py:22: DeprecationWarning: Function 'semver.compare' is deprecated. Deprecated since version 2.10.0.  This function will be removed in semver 3. Use the respective 'semver.VersionInfo.compare' instead.
+  compare_result = semver.compare(version, tf.__version__)
+/home/hz/anaconda3/envs/py36/lib/python3.6/site-packages/tfsnippet/utils/tfver.py:22: DeprecationWarning: Function 'semver.compare' is deprecated. Deprecated since version 2.10.0.  This function will be removed in semver 3. Use the respective 'semver.VersionInfo.compare' instead.
+  compare_result = semver.compare(version, tf.__version__)
+INFO:tensorflow:Restoring parameters from /tmp/tmpvrv3l4e8/variables.dat-4000
+2025-06-23 17:21:24,115 [INFO] tensorflow: Restoring parameters from /tmp/tmpvrv3l4e8/variables.dat-4000
+
+
+train_values: (20109, 38)
+[Epoch 1/10, Step 100] step time: 1.937s (±9.534s); train time: 1m 41.18s; valid time: 1m 32.62s; loss: -14.6355 (±22.811); valid loss: -11.947 (*)
+[Epoch 1/10, Step 200] step time: 2.462s (±11.82s); train time: 2m 7.461s; valid time: 1m 58.77s; loss: -30.9336 (±10.8426); valid loss: -37.0592 (*)
+[Epoch 1/10, Step 300] step time: 1.539s (±7.692s); train time: 1m 16.8s; valid time: 1m 17.19s; loss: -36.2856 (±7.17529); valid loss: -36.472
+[Epoch 1/10, Step 400] step time: 1.564s (±7.865s); train time: 1m 17.4s; valid time: 1m 19.11s; loss: -40.7794 (±4.8227); valid loss: -46.9499 (*)
+train_values: (20109, 38)
+[Epoch 2/10, Step 500, ETA 1h 45m 30.09s] step time: 1.536s (±7.744s); train time: 1m 15.96s; valid time: 1m 17.78s; loss: -42.9244 (±4.89593); valid loss: -41.7232
+[Epoch 2/10, Step 600, ETA 1h 40m 2.276s] step time: 1.549s (±7.632s); train time: 1m 18.19s; valid time: 1m 16.73s; loss: -40.1691 (±12.8841); valid loss: -36.9471
+[Epoch 2/10, Step 700, ETA 1h 35m 28.21s] step time: 1.558s (±7.752s); train time: 1m 17.97s; valid time: 1m 17.88s; loss: -42.6166 (±21.3815); valid loss: -46.9057
+[Epoch 2/10, Step 800, ETA 1h 31m 22.89s] step time: 1.556s (±7.908s); train time: 1m 16.11s; valid time: 1m 19.53s; loss: -44.3421 (±5.53077); valid loss: -40.8714
+train_values: (20109, 38)
+[Epoch 3/10, Step 900, ETA 1h 28m 10.1s] step time: 1.65s (±8.741s); train time: 1m 17.16s; valid time: 1m 27.95s; loss: -44.0676 (±9.88161); valid loss: -46.5819
+[Epoch 3/10, Step 1000, ETA 1h 25m 20.71s] step time: 1.71s (±8.089s); train time: 1m 29.63s; valid time: 1m 21.44s; loss: -45.9667 (±8.01519); valid loss: -48.3054 (*)
+[Epoch 3/10, Step 1100, ETA 1h 21m 42.67s] step time: 1.527s (±7.636s); train time: 1m 16s; valid time: 1m 16.73s; loss: -45.4047 (±8.80448); valid loss: -47.1957
+[Epoch 3/10, Step 1200, ETA 1h 18m 15.96s] step time: 1.528s (±7.67s); train time: 1m 15.78s; valid time: 1m 17.14s; loss: -45.5142 (±10.0105); valid loss: -43.3038
+train_values: (20109, 38)
+[Epoch 4/10, Step 1300, ETA 1h 15m 56.18s] step time: 1.81s (±9.298s); train time: 1m 27.72s; valid time: 1m 33.43s; loss: -47.9941 (±3.93429); valid loss: -49.5866 (*)
+[Epoch 4/10, Step 1400, ETA 1h 13m 24.62s] step time: 1.779s (±8.792s); train time: 1m 29.66s; valid time: 1m 28.34s; loss: -47.5158 (±8.07498); valid loss: -35.0136
+[Epoch 4/10, Step 1500, ETA 1h 10m 14.32s] step time: 1.568s (±7.939s); train time: 1m 17.23s; valid time: 1m 19.64s; loss: -48.1794 (±7.03743); valid loss: -49.8894 (*)
+[Epoch 4/10, Step 1600, ETA 1h 7m 23.59s] step time: 1.671s (±9.21s); train time: 1m 14.64s; valid time: 1m 32.5s; loss: -49.6843 (±7.98373); valid loss: -52.2789 (*)
+train_values: (20109, 38)
+[Epoch 5/10, Step 1700, ETA 1h 5m 0.4913s] step time: 1.871s (±9.511s); train time: 1m 31.69s; valid time: 1m 35.55s; loss: -49.7352 (±5.11098); valid loss: -50.6186
+[Epoch 5/10, Step 1800, ETA 1h 2m 34.22s] step time: 1.886s (±9.664s); train time: 1m 31.66s; valid time: 1m 37s; loss: -51.1951 (±6.27102); valid loss: -53.1389 (*)
+[Epoch 5/10, Step 1900, ETA 1h 7.311s] step time: 1.92s (±9.756s); train time: 1m 34.04s; valid time: 1m 38.08s; loss: -51.0636 (±8.36823); valid loss: -53.8966 (*)
+[Epoch 5/10, Step 2000, ETA 57m 34.3s] step time: 1.905s (±9.782s); train time: 1m 32.3s; valid time: 1m 38.23s; loss: -53.1748 (±4.15674); valid loss: -53.9168 (*)
+train_values: (20109, 38)
+[Epoch 6/10, Step 2100, ETA 54m 55.05s] step time: 1.875s (±9.409s); train time: 1m 33.01s; valid time: 1m 34.59s; loss: -52.5992 (±5.04808); valid loss: -48.4499
+[Epoch 6/10, Step 2200, ETA 52m 16.31s] step time: 1.913s (±9.776s); train time: 1m 33.12s; valid time: 1m 38.25s; loss: -53.5604 (±4.80178); valid loss: -55.5002 (*)
+[Epoch 6/10, Step 2300, ETA 49m 28.92s] step time: 1.834s (±9.287s); train time: 1m 30.3s; valid time: 1m 33.2s; loss: -51.484 (±5.32355); valid loss: -53.9156
+[Epoch 6/10, Step 2400, ETA 46m 54.1s] step time: 2.043s (±11.27s); train time: 1m 31.16s; valid time: 1m 53.21s; loss: -53.5474 (±5.04402); valid loss: -56.2004 (*)
+train_values: (20109, 38)
+[Epoch 7/10, Step 2500, ETA 44m 3.578s] step time: 1.847s (±9.265s); train time: 1m 31.79s; valid time: 1m 33.03s; loss: -54.0863 (±7.77205); valid loss: -54.3945
+[Epoch 7/10, Step 2600, ETA 41m 13.11s] step time: 1.869s (±9.581s); train time: 1m 30.93s; valid time: 1m 36.02s; loss: -55.3849 (±6.41293); valid loss: -57.1916 (*)
+[Epoch 7/10, Step 2700, ETA 38m 20.35s] step time: 1.847s (±9.25s); train time: 1m 31.73s; valid time: 1m 33.01s; loss: -51.1121 (±8.85984); valid loss: -46.832
+[Epoch 7/10, Step 2800, ETA 35m 26.81s] step time: 1.848s (±9.384s); train time: 1m 30.57s; valid time: 1m 34.33s; loss: -54.3532 (±5.36765); valid loss: -54.8123
+train_values: (20109, 38)
+[Epoch 8/10, Step 2900, ETA 32m 38.62s] step time: 2.01s (±10.77s); train time: 1m 33.03s; valid time: 1m 48.06s; loss: -55.1157 (±5.29574); valid loss: -54.2729
+[Epoch 8/10, Step 3000, ETA 29m 45.4s] step time: 1.925s (±9.571s); train time: 1m 36.55s; valid time: 1m 36.01s; loss: -57.1516 (±5.90009); valid loss: -47.6835
+[Epoch 8/10, Step 3100, ETA 26m 51.39s] step time: 1.941s (±9.867s); train time: 1m 35.2s; valid time: 1m 38.94s; loss: -57.106 (±7.58927); valid loss: -59.6511 (*)
+[Epoch 8/10, Step 3200, ETA 24m 0.4813s] step time: 2.115s (±11.73s); train time: 1m 33.66s; valid time: 1m 57.92s; loss: -57.2578 (±5.62089); valid loss: -57.3573
+train_values: (20109, 38)
+[Epoch 9/10, Step 3300, ETA 21m 3.059s] step time: 1.924s (±9.677s); train time: 1m 35.3s; valid time: 1m 37.2s; loss: -58.4988 (±5.48163); valid loss: -53.5122
+[Epoch 9/10, Step 3400, ETA 18m 4.276s] step time: 1.897s (±9.567s); train time: 1m 33.67s; valid time: 1m 36.14s; loss: -57.0995 (±5.23199); valid loss: -58.1272
+[Epoch 9/10, Step 3500, ETA 15m 4.86s] step time: 1.897s (±9.675s); train time: 1m 32.46s; valid time: 1m 37.33s; loss: -58.0826 (±7.0089); valid loss: -58.1366
+[Epoch 9/10, Step 3600, ETA 12m 4.852s] step time: 1.896s (±9.471s); train time: 1m 34.54s; valid time: 1m 35.11s; loss: -59.0061 (±5.48122); valid loss: -55.369
+train_values: (20109, 38)
+[Epoch 10/10, Step 3700, ETA 9m 4.769s] step time: 1.95s (±9.85s); train time: 1m 36.23s; valid time: 1m 38.91s; loss: -56.3133 (±6.15878); valid loss: -59.8992 (*)
+[Epoch 10/10, Step 3800, ETA 6m 5.031s] step time: 2.167s (±11.96s); train time: 1m 36.54s; valid time: 2m 0.2153s; loss: -57.8352 (±6.47409); valid loss: -60.1586 (*)
+[Epoch 10/10, Step 3900, ETA 3m 2.786s] step time: 1.93s (±9.608s); train time: 1m 36.61s; valid time: 1m 36.46s; loss: -57.8431 (±6.20493); valid loss: -47.6173
+[Epoch 10/10, Step 4000, ETA 0s] step time: 1.954s (±10.01s); train time: 1m 35.02s; valid time: 1m 40.41s; loss: -56.1086 (±8.41131); valid loss: -61.6979 (*)
+train end time:  2025-06-23 17:21:24
+train time:  7355.670075893402
+test start time:  2025-06-23 17:21:24
+------------------------------ testing ------------------------------
+test_score shape:  (28627, 38)
+test_z shape:  (28627, 100, 6)
+search range:  -400.0 400.0
+cur thr:  -399.0 [0.8926555878147209, 0.9868154058132312, 0.8149078658717934, 973.0, 27420.0, 13.0, 221.0, 33.24958438019525] [0.8926555878147209, 0.9868154058132312, 0.8149078658717934, 973.0, 27420.0, 13.0, 221.0, 33.24958438019525] -399.0
+cur thr:  -349.0 [0.8922462977750795, 0.9858155928488795, 0.8149078658717934, 973.0, 27419.0, 14.0, 221.0, 33.24958438019525] [0.8926555878147209, 0.9868154058132312, 0.8149078658717934, 973.0, 27420.0, 13.0, 221.0, 33.24958438019525] -399.0
+cur thr:  -299.0 [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  -249.0 [0.9870297052859416, 0.9857978196675203, 0.9882746985906642, 1180.0, 27416.0, 17.0, 14.0, 49.55500494438951] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  -199.0 [0.985381213133751, 0.9825145630098704, 0.9882746985906642, 1180.0, 27412.0, 21.0, 14.0, 31.55520494216731]  0%|          | 0/28627 [00:00<?, ?it/s]100%|██████████| 28627/28627 [00:00<00:00, 598570.95it/s] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  -149.0 [0.9812839734038741, 0.9744013131758769, 0.9882746985906642, 1180.0, 27402.0, 31.0, 14.0, 26.55526049710559] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  -99.0 [0.9756047488781021, 0.9632652982590588, 0.9882746985906642, 1180.0, 27388.0, 45.0, 14.0, 26.444150620548662] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  -49.0 [0.9059451237366011, 0.8362863158307136, 0.9882746985906642, 1180.0, 27202.0, 231.0, 14.0, 26.333040743991734] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  1.0 [0.6402101210367099, 0.47082018741790144, 0.9999999916247907, 1194.0, 26091.0, 1342.0, 0.0, 10.999900000909083] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  51.0 [0.09983182735042138, 0.052538942157643695, 0.9999999916247907, 1194.0, 5901.0, 21532.0, 0.0, 0.636357851292261] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  101.0 [0.0800770287631949, 0.041708876221151756, 0.9999999916247907, 1194.0, 0.0, 27433.0, 0.0, 0.0] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  151.0 [0.0800770287631949, 0.041708876221151756, 0.9999999916247907, 1194.0, 0.0, 27433.0, 0.0, 0.0] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  201.0 [0.0800770287631949, 0.041708876221151756, 0.9999999916247907, 1194.0, 0.0, 27433.0, 0.0, 0.0] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  251.0 [0.0800770287631949, 0.041708876221151756, 0.9999999916247907, 1194.0, 0.0, 27433.0, 0.0, 0.0] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  301.0 [0.0800770287631949, 0.041708876221151756, 0.9999999916247907, 1194.0, 0.0, 27433.0, 0.0, 0.0] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+cur thr:  351.0 [0.0800770287631949, 0.041708876221151756, 0.9999999916247907, 1194.0, 0.0, 27433.0, 0.0, 0.0] [0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+[0.9882696986159606, 0.9882746985906642, 0.9882746985906642, 1180.0, 27419.0, 14.0, 14.0, 51.110543216186485] -315.0
+label_file: ServerMachineDataset/interpretation_label/machine-3-6.txt
+Initial threshold : 17.361542
+Number of peaks : 214
+Grimshaw maximum log-likelihood estimation ... [done]
+	γ = 0
+	σ = 216.95715
+	L = 1365.2557751562706
+Extreme quantile (probability = 0.001): 453.7981242571833
+849
+28627
+POT result:  (0.7663624053873942, 0.6212278843848705, 0.9999999916247907, 1194.0, 26705.0, 728.0, 0.0) -17.87989308787678 21.636166943936875
+
+=== 全局调试信息 ===
+y_true shape: (28627,), unique values: [0. 1.]
+y_pred shape: (28627,), unique values: [False  True]
+feature_scores shape: (28627, 38)
+interpretation_segments 数量: 11
+
+
+=== 处理第 1/11 段 ===
+原始段范围: orig_start=1187, orig_end=1221
+调整后段范围: start=1088, end=1122
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 1, 2, 3, 18, 19, 20, 21, 22, 23, 24, 27, 28, 30, 31, 33, 34, 35]
+段内检测到的异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 25, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [3, 28, 33]
+段内指标: TP=3, FP=18, FN=15, TN=2, IPS=0.1667
+
+=== 处理第 2/11 段 ===
+原始段范围: orig_start=8177, orig_end=8211
+调整后段范围: start=8078, end=8112
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 1, 2, 3, 32, 33]
+段内检测到的异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [0, 1, 3, 4, 5, 7, 9, 10, 11, 14, 15, 16, 17, 18, 20, 24, 26, 27, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [0, 1, 3, 32, 33]
+段内指标: TP=5, FP=19, FN=1, TN=13, IPS=0.8333
+
+=== 处理第 3/11 段 ===
+原始段范围: orig_start=10637, orig_end=10743
+调整后段范围: start=10538, end=10644
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 32, 33]
+段内检测到的异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [0, 1, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 21, 23, 25, 26, 28, 29, 30, 32, 33, 35, 36, 37]
+真实与推断的交集: [0, 32, 33]
+段内指标: TP=3, FP=23, FN=0, TN=12, IPS=1.0000
+
+=== 处理第 4/11 段 ===
+原始段范围: orig_start=15633, orig_end=15863
+调整后段范围: start=15534, end=15764
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True False]
+段内真实异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 8, 9, 11, 12, 13, 14, 15]
+段内检测到的异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 23, 25, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [8, 9, 11, 12, 13, 14, 15]
+段内指标: TP=7, FP=18, FN=1, TN=12, IPS=0.8750
+
+=== 处理第 5/11 段 ===
+原始段范围: orig_start=16788, orig_end=16995
+调整后段范围: start=16689, end=16896
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True False]
+段内真实异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 9, 11, 12, 13, 14]
+段内检测到的异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 23, 25, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [9, 11, 12, 14]
+段内指标: TP=4, FP=18, FN=2, TN=14, IPS=0.6667
+
+=== 处理第 6/11 段 ===
+原始段范围: orig_start=18054, orig_end=18134
+调整后段范围: start=17955, end=18035
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+ 72 73 74 75 76 77 78 79]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 9, 11, 12, 13, 14]
+段内检测到的异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+ 72 73 74 75 76 77 78 79]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 19, 23, 25, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [9, 11, 12, 14]
+段内指标: TP=4, FP=19, FN=2, TN=13, IPS=0.6667
+
+=== 处理第 7/11 段 ===
+原始段范围: orig_start=19276, orig_end=19500
+调整后段范围: start=19177, end=19401
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 9, 11, 12, 13, 14]
+段内检测到的异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 23, 25, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [9, 11, 12, 13, 14]
+段内指标: TP=5, FP=19, FN=1, TN=13, IPS=0.8333
+
+=== 处理第 8/11 段 ===
+原始段范围: orig_start=20681, orig_end=20865
+调整后段范围: start=20582, end=20766
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 8, 9, 11, 12, 13, 14]
+段内检测到的异常时间点索引 (相对段内): [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 23, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [8, 9, 11, 12, 13, 14]
+段内指标: TP=6, FP=17, FN=1, TN=14, IPS=0.8571
+
+=== 处理第 9/11 段 ===
+原始段范围: orig_start=24503, orig_end=24506
+调整后段范围: start=24404, end=24407
+段内真实标签 (seg_true): [1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True False]
+段内真实异常时间点索引 (相对段内): [0 1 2]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 8, 9, 11, 12, 13, 14]
+段内检测到的异常时间点索引 (相对段内): [0 1 2]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [4, 7, 9, 10, 11, 14, 15, 16, 17, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [9, 11, 14]
+段内指标: TP=3, FP=13, FN=4, TN=18, IPS=0.4286
+
+=== 处理第 10/11 段 ===
+原始段范围: orig_start=26138, orig_end=26149
+调整后段范围: start=26039, end=26050
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True False]
+段内真实异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 11]
+段内检测到的异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 4, 6, 7, 8, 9, 10, 11, 12, 15, 16, 17, 23, 25, 26, 28, 29, 32, 33, 36, 37]
+真实与推断的交集: [11]
+段内指标: TP=1, FP=20, FN=1, TN=16, IPS=0.5000
+
+=== 处理第 11/11 段 ===
+原始段范围: orig_start=27877, orig_end=27958
+调整后段范围: start=27778, end=27859
+段内真实标签 (seg_true): [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.]
+段内预测标签 (seg_pred): [ True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True]
+段内真实异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+ 72 73 74 75 76 77 78 79 80]
+段内是否有预测为异常的时间点: True
+真实异常维度 (0-based): [0, 1, 2, 3, 5, 6, 10, 15, 18, 19, 20, 21, 22, 23, 24, 25, 27, 29, 30, 31, 32, 34, 35]
+段内检测到的异常时间点索引 (相对段内): [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+ 72 73 74 75 76 77 78 79 80 81]
+选择的维度数量 (k): 15 (基于真实异常维度数的 100%)
+推断的异常维度 (0-based): [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 33, 34, 35, 36, 37]
+真实与推断的交集: [1, 2, 5, 6, 10, 15, 18, 19, 21, 22, 23, 24, 25, 29, 31, 32, 34, 35]
+段内指标: TP=18, FP=14, FN=5, TN=1, IPS=0.7826
+
+=== 汇总指标 ===
+总 TP: 59, 总 TN: 128, 总 FP: 198, 总 FN: 33
+平均 IPS: 0.7923, Precision: 0.2296, Recall: 0.6413, F1: 0.3381
+每段IPS与混淆: [{'original_start': 1187, 'original_end': 1221, 'start': 1088, 'end': 1122, 'TP': 3, 'TN': 2, 'FP': 18, 'FN': 15, 'IPS': 0.16666666666666666, 'k_selected': 15, 'gt_dims_count': 18}, {'original_start': 8177, 'original_end': 8211, 'start': 8078, 'end': 8112, 'TP': 5, 'TN': 13, 'FP': 19, 'FN': 1, 'IPS': 0.8333333333333334, 'k_selected': 15, 'gt_dims_count': 6}, {'original_start': 10637, 'original_end': 10743, 'start': 10538, 'end': 10644, 'TP': 3, 'TN': 12, 'FP': 23, 'FN': 0, 'IPS': 1.0, 'k_selected': 15, 'gt_dims_count': 3}, {'original_start': 15633, 'original_end': 15863, 'start': 15534, 'end': 15764, 'TP': 7, 'TN': 12, 'FP': 18, 'FN': 1, 'IPS': 0.875, 'k_selected': 15, 'gt_dims_count': 8}, {'original_start': 16788, 'original_end': 16995, 'start': 16689, 'end': 16896, 'TP': 4, 'TN': 14, 'FP': 18, 'FN': 2, 'IPS': 0.6666666666666666, 'k_selected': 15, 'gt_dims_count': 6}, {'original_start': 18054, 'original_end': 18134, 'start': 17955, 'end': 18035, 'TP': 4, 'TN': 13, 'FP': 19, 'FN': 2, 'IPS': 0.6666666666666666, 'k_selected': 15, 'gt_dims_count': 6}, {'original_start': 19276, 'original_end': 19500, 'start': 19177, 'end': 19401, 'TP': 5, 'TN': 13, 'FP': 19, 'FN': 1, 'IPS': 0.8333333333333334, 'k_selected': 15, 'gt_dims_count': 6}, {'original_start': 20681, 'original_end': 20865, 'start': 20582, 'end': 20766, 'TP': 6, 'TN': 14, 'FP': 17, 'FN': 1, 'IPS': 0.8571428571428571, 'k_selected': 15, 'gt_dims_count': 7}, {'original_start': 24503, 'original_end': 24506, 'start': 24404, 'end': 24407, 'TP': 3, 'TN': 18, 'FP': 13, 'FN': 4, 'IPS': 0.42857142857142855, 'k_selected': 15, 'gt_dims_count': 7}, {'original_start': 26138, 'original_end': 26149, 'start': 26039, 'end': 26050, 'TP': 1, 'TN': 16, 'FP': 20, 'FN': 1, 'IPS': 0.5, 'k_selected': 15, 'gt_dims_count': 2}, {'original_start': 27877, 'original_end': 27958, 'start': 27778, 'end': 27859, 'TP': 18, 'TN': 1, 'FP': 14, 'FN': 5, 'IPS': 0.782608695652174, 'k_selected': 15, 'gt_dims_count': 23}]
+总和: {'TP': 59, 'TN': 128, 'FP': 198, 'FN': 33, 'IPS': 0.7923247253077669, 'precision': 0.22957198443579765, 'recall': 0.6413043478260869, 'F1': 0.33810888252148996}
+test end time:  2025-06-23 17:33:18
+test time:  713.7392446994781
+==============================result==============================
+{'FN': 14.0,
+ 'FP': 14.0,
+ 'TN': 27419.0,
+ 'TP': 1180.0,
+ 'best-f1': 0.9882696986159606,
+ 'best_valid_loss': -61.69789709309282,
+ 'dataset': 'machine-3-6',
+ 'latency': 51.110543216186485
+,
+ 'pot-FN': 0.0,
+ 'pot-FP': 728.0,
+ 'pot-TN': 26705.0,
+ 'pot-TP': 1194.0,
+ 'pot-f1': 0.7663624053873942,
+ 'pot-latency': 21.636166943936875,
+ 'pot-precision': 0.6212278843848705,
+ 'pot-recall': 0.9999999916247907,
+ 'pot-threshold': -17.87989308787678,
+ 'precision': 0.9882746985906642,
+ 'pred_time': 0.5995283617815214,
+ 'pred_total_time': 344.0140745639801,
+ 'recall': 0.9882746985906642,
+ 'segment_results': [{'FN': 15,
+                      'FP': 18,
+                      'IPS': 0.16666666666666666,
+                      'TN': 2,
+                      'TP': 3,
+                      'end': 1122,
+                      'gt_dims_count': 18,
+                      'k_selected': 15,
+                      'original_end': 1221,
+                      'original_start': 1187,
+                      'start': 1088},
+                     {'FN': 1,
+                      'FP': 19,
+                      'IPS': 0.8333333333333334,
+                      'TN': 13,
+                      'TP': 5,
+                      'end': 8112,
+                      'gt_dims_count': 6,
+                      'k_selected': 15,
+                      'original_end': 8211,
+                      'original_start': 8177,
+                      'start': 8078},
+                     {'FN': 0,
+                      'FP': 23,
+                      'IPS': 1.0,
+                      'TN': 12,
+                      'TP': 3,
+                      'end': 10644,
+                      'gt_dims_count': 3,
+                      'k_selected': 15,
+                      'original_end': 10743,
+                      'original_start': 10637,
+                      'start': 10538},
+                     {'FN': 1,
+                      'FP': 18,
+                      'IPS': 0.875,
+                      'TN': 12,
+                      'TP': 7,
+                      'end': 15764,
+                      'gt_dims_count': 8,
+                      'k_selected': 15,
+                      'original_end': 15863,
+                      'original_start': 15633,
+                      'start': 15534},
+                     {'FN': 2,
+                      'FP': 18,
+                      'IPS': 0.6666666666666666,
+                      'TN': 14,
+                      'TP': 4,
+                      'end': 16896,
+                      'gt_dims_count': 6,
+                      'k_selected': 15,
+                      'original_end': 16995,
+                      'original_start': 16788,
+                      'start': 16689},
+                     {'FN': 2,
+                      'FP': 19,
+                      'IPS': 0.6666666666666666,
+                      'TN': 13,
+                      'TP': 4,
+                      'end': 18035,
+                      'gt_dims_count': 6,
+                      'k_selected': 15,
+                      'original_end': 18134,
+                      'original_start': 18054,
+                      'start': 17955},
+                     {'FN': 1,
+                      'FP': 19,
+                      'IPS': 0.8333333333333334,
+                      'TN': 13,
+                      'TP': 5,
+                      'end': 19401,
+                      'gt_dims_count': 6,
+                      'k_selected': 15,
+                      'original_end': 19500,
+                      'original_start': 19276,
+                      'start': 19177},
+                     {'FN': 1,
+                      'FP': 17,
+                      'IPS': 0.8571428571428571,
+                      'TN': 14,
+                      'TP': 6,
+                      'end': 20766,
+                      'gt_dims_count': 7,
+                      'k_selected': 15,
+                      'original_end': 20865,
+                      'original_start': 20681,
+                      'start': 20582},
+                     {'FN': 4,
+                      'FP': 13,
+                      'IPS': 0.42857142857142855,
+                      'TN': 18,
+                      'TP': 3,
+                      'end': 24407,
+                      'gt_dims_count': 7,
+                      'k_selected': 15,
+                      'original_end': 24506,
+                      'original_start': 24503,
+                      'start': 24404},
+                     {'FN': 1,
+                      'FP': 20,
+                      'IPS': 0.5,
+                      'TN': 16,
+                      'TP': 1,
+                      'end': 26050,
+                      'gt_dims_count': 2,
+                      'k_selected': 15,
+                      'original_end': 26149,
+                      'original_start': 26138,
+                      'start': 26039},
+                     {'FN': 5,
+                      'FP': 14,
+                      'IPS': 0.782608695652174,
+                      'TN': 1,
+                      'TP': 18,
+                      'end': 27859,
+                      'gt_dims_count': 23,
+                      'k_selected': 15,
+                      'original_end': 27958,
+                      'original_start': 27877,
+                      'start': 27778}],
+ 'segment_summary': {'F1': 0.33810888252148996,
+                     'FN': 33,
+                     'FP': 198,
+                     'IPS': 0.7923247253077669,
+                     'TN': 128,
+                     'TP': 59,
+                     'precision': 0.22957198443579765,
+                     'recall': 0.6413043478260869},
+ 'threshold': -315.0,
+ 'train_time': 732.8852868795395,
+ 'valid_time': 0.5393185553843515}
